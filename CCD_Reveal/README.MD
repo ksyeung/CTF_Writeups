@@ -14,11 +14,9 @@ Then I imported the output into a spreadsheet application for easier review: the
 
 I made some initial observations and bolded these rows for follow up later: 
 
+- powershell.exe and msiexec.exe in the "psxview" output, and
 
-powershell.exe and msiexec.exe in the "psxview" output, and
-
-
-WMiPrvSE.exe, Calculator.exe (this is a child process of svchost.exe, which is suspicious), and the orphaned processes MicrosoftEdgeUpdater.exe, wordpad.exe, powershell.exe, and net.exe.
+- WMiPrvSE.exe, Calculator.exe (this is a child process of svchost.exe, which is suspicious), and the orphaned processes MicrosoftEdgeUpdater.exe, wordpad.exe, powershell.exe, and net.exe.
 
 Looking at the "pstree" output, the command line associated with powershell.exe was the apparent malicious process: use of rundll32 to load a DLL over a network share is a popular method to load and execute code directly in memory, without leaving any disk artifacts behind.
 
