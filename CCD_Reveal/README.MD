@@ -9,7 +9,7 @@ Here is the scenario:
 
 *Your task is to delve into the provided memory dump from the compromised system. You need to identify basic Indicators of Compromise (IOCs) and determine the extent of the intrusion. Investigate the malicious commands or files executed in the environment, and report your findings in detail to aid in remediation and enhance future defenses.*
 
-To get started, I ran a few Volatility3 plugins with the output directed into their own file: psxview, pstree, cmdline, netscan, malfind. See the HTML files in this folder for the output.
+To get started, I ran a few Volatility3 plugins with the output directed into their own file: psxview, pstree, cmdline, netscan, malfind. See the files in this folder for the output.
 Then I imported the output into a spreadsheet application for easier review: the tab-delimited output doesn't render correctly in Notepad or Notepad++, and its easier to sort the data this way.
 
 I made some initial observations and bolded these rows for follow up later: 
