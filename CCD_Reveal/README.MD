@@ -10,10 +10,14 @@ Here is the scenario:
 *Your task is to delve into the provided memory dump from the compromised system. You need to identify basic Indicators of Compromise (IOCs) and determine the extent of the intrusion. Investigate the malicious commands or files executed in the environment, and report your findings in detail to aid in remediation and enhance future defenses.*
 
 To get started, I ran a few Volatility3 plugins with the output directed into their own file: psxview, pstree, cmdline, netscan, malfind. See the HTML files in this folder for the output.
-Then I imported the output into a spreadsheet application for easier review: the tab-delimited output doesn't render correctly in Notepad or Notepad++, and its easier to sort the data.
+Then I imported the output into a spreadsheet application for easier review: the tab-delimited output doesn't render correctly in Notepad or Notepad++, and its easier to sort the data this way.
 
 I made some initial observations and bolded these rows for follow up later: 
+
+
 powershell.exe and msiexec.exe in the "psxview" output, and
+
+
 WMiPrvSE.exe, Calculator.exe (this is a child process of svchost.exe, which is suspicious), and the orphaned processes MicrosoftEdgeUpdater.exe, wordpad.exe, powershell.exe, and net.exe.
 
 Looking at the "pstree" output, the command line associated with powershell.exe was the apparent malicious process: use of rundll32 to load a DLL over a network share is a popular method to load and execute code directly in memory, without leaving any disk artifacts behind.
