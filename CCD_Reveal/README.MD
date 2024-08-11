@@ -2,7 +2,11 @@ This is a brief description of my work on the CyberDefenders "Reveal" lab (categ
 
 
 Here is the scenario:
+
+
 "As a cybersecurity analyst for a leading financial institution, an alert from your SIEM solution has flagged unusual activity on an internal workstation. Given the sensitive financial data at risk, immediate action is required to prevent potential breaches.
+
+
 Your task is to delve into the provided memory dump from the compromised system. You need to identify basic Indicators of Compromise (IOCs) and determine the extent of the intrusion. Investigate the malicious commands or files executed in the environment, and report your findings in detail to aid in remediation and enhance future defenses."
 
 To get started, I ran a few Volatility3 plugins with the output directed into their own file: psxview, pstree, cmdline, netscan, malfind. See the HTML files in this folder for the output.
