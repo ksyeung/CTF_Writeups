@@ -1,4 +1,6 @@
-This is a brief description of my work on the CyberDefenders "Reveal" lab (category: Endpoint Forensics).
+This is a brief description of my work on the CyberDefenders "Reveal" lab (category: Endpoint Forensics).  
+
+
 Here is the scenario:
 "As a cybersecurity analyst for a leading financial institution, an alert from your SIEM solution has flagged unusual activity on an internal workstation. Given the sensitive financial data at risk, immediate action is required to prevent potential breaches.
 Your task is to delve into the provided memory dump from the compromised system. You need to identify basic Indicators of Compromise (IOCs) and determine the extent of the intrusion. Investigate the malicious commands or files executed in the environment, and report your findings in detail to aid in remediation and enhance future defenses."
