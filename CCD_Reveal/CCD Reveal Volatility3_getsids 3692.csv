@@ -1,0 +1,19 @@
+Volatility 3 Framework 2.8.0,,,
+,,,
+PID,Process,SID,Name
+,,,
+3692,powershell.exe,S-1-5-21-3274565340-3808842250-3617890653-1001,Elon
+3692,powershell.exe,S-1-5-21-3274565340-3808842250-3617890653-513,Domain Users
+3692,powershell.exe,S-1-1-0,Everyone
+3692,powershell.exe,S-1-5-114,Local Account (Member of Administrators)
+3692,powershell.exe,S-1-5-32-544,Administrators
+3692,powershell.exe,S-1-5-32-545,Users
+3692,powershell.exe,S-1-5-4,Interactive
+3692,powershell.exe,S-1-2-1,Console Logon (Users who are logged onto the physical console)
+3692,powershell.exe,S-1-5-11,Authenticated Users
+3692,powershell.exe,S-1-5-15,This Organization
+3692,powershell.exe,S-1-5-113,Local Account
+3692,powershell.exe,S-1-5-5-0-277248,Logon Session
+3692,powershell.exe,S-1-2-0,Local (Users with the ability to log in locally)
+3692,powershell.exe,S-1-5-64-10,NTLM Authentication
+3692,powershell.exe,S-1-16-12288,High Mandatory Level
