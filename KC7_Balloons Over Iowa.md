@@ -622,3 +622,762 @@ Looking at the activity seen in question 29, we have a general idea of what thei
 ---
 
 Probably ransomware.
+
+Section 3
+
+## Question 1
+
+You received a report listing other potential employees that were targeted by a similar attack. The report mentions Son Johnson had downloaded a suspicious Word document file on 2023-02-19 at 05:02. What was the name of this file?
+
+---
+
+```
+let son_hostname = toscalar(Employees
+| where name == "Son Johnson"
+| project hostname);
+FileCreationEvents
+| where hostname == son_hostname
+| where timestamp >= datetime(2023-02-19 05:02:00) and timestamp < datetime(2023-02-19 05:03:00)
+| project filename;
+```
+
+## Question 2
+
+From which domain did Son Johnson download that docx file?
+
+---
+
+```
+let son_ip_addr = toscalar(Employees
+| where name == "Son Johnson"
+| project ip_addr);
+OutboundNetworkEvents
+| where src_ip == son_ip_addr
+| where timestamp >= datetime(2023-02-19 05:02:00) and timestamp < datetime(2023-02-19 05:03:00);
+```
+
+Produces two results:
+
+| Timestamp                  | Method | IP Address   | User Agent                                                                                                                                       | URL                                                                                                        |
+|----------------------------|--------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| 2023-02-19T05:02:21.22982Z | GET    | 192.168.2.26 | Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Safari/537.36                               | [https://blimpgoespop.com?redirect=espionage.com](https://blimpgoespop.com?redirect=espionage.com)         |
+| 2023-02-19T05:02:57.22982Z | GET    | 192.168.2.26 | Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Safari/537.36                               | [https://espionage.com/online/published/Flight-Crew-Information.docx](https://espionage.com/online/published/Flight-Crew-Information.docx) |
+
+## Question 3
+
+What IP address does espionage.com resolve to?
+
+---
+
+```
+PassiveDns
+| where domain contains "espionage.com"
+| project ip;
+```
+
+## Question 4
+
+The PassiveDNS data records a timestamp of when a query was made. This documents what the domain resolved to at the time of the query. What timestamp was recorded for the domain in question 3?
+
+---
+
+Modify the query above.
+
+## Question 5
+
+What other Top Level Domain (TLD) such as .com, .org, is used by the domains hosted on the IP identified in question 3?
+
+---
+
+```
+PassiveDns
+| where ip == "131.102.77.156"
+| project domain;
+```
+
+## Question  6
+
+How many domains resolve to the IP identified in question 3?
+
+---
+
+```
+PassiveDns
+| where ip == "131.102.77.156"
+| project domain
+| count;
+```
+
+## Question 7
+
+One of the domains identified in question 6 resolves to an IP that starts with 194.
+
+What is the IP?
+
+---
+
+```
+PassiveDns
+| where domain in (
+PassiveDns
+| where ip == "131.102.77.156"
+| distinct domain
+)
+| project domain, ip;
+```
+
+## Question 8
+
+The attackers performed reconnaissance against our organization using the IP identified in question 7. As part of this reconnaissance, the attackers searched for a three-word phrase. What was this phrase?
+
+---
+
+```
+InboundNetworkEvents
+| where src_ip == "194.235.79.0"
+```
+
+## Question 9
+
+Just before downloading the file identified in question 1, Son Johnson browsed to a domain belonging to a partner company. What domain did he browse to?
+
+---
+
+Review the results of the query from question 1.
+
+## Question 10
+
+Take a closer look at the url from question 9. What kind of attack was Son Johnson a victim of?
+
+---
+
+See the training guide.
+
+## Question 11
+
+How many different domains did the attackers use in this kind of attack? (The attack type identified in question 10.)
+
+---
+
+```
+OutboundNetworkEvents
+| where url has "blimpgoespop.com?redirect="
+| distinct url;
+```
+
+## Question 12
+
+How many employees at Balloons Over Iowa were victims of this kind of attack? (The attack type identified in question 10)
+
+```
+let sources = (OutboundNetworkEvents
+| where url has "blimpgoespop.com?redirect="
+| distinct src_ip);
+Employees
+| where ip_addr in (sources)
+| count;
+```
+
+## Question 13
+
+How many different employee roles did the attackers target using this type of attack? (The attack type identified in question 10)
+
+---
+
+```
+let sources = (OutboundNetworkEvents
+| where url has "blimpgoespop.com?redirect="
+| distinct src_ip);
+Employees
+| where ip_addr in (sources)
+| distinct role
+| count;
+```
+
+## Question 14
+
+You have received an alert that malware might have infected the device 3CIU-LAPTOP. Some suspicious processes seem to come from a file with the following hash: 4c199019661ef7ef79023e2c960617ec9a2f275ad578b1b1a027adb201c165f3. What is the name of that file?
+
+---
+
+```
+FileCreationEvents
+| where hostname == "3CIU-LAPTOP"
+| where sha256 == "4c199019661ef7ef79023e2c960617ec9a2f275ad578b1b1a027adb201c165f3"
+| project filename;
+```
+
+## Question 15
+
+What is the username associated with the device from in question 14?
+
+---
+
+```
+Employees
+| where hostname == "3CIU-LAPTOP"
+| project username;
+```
+
+## Question 16
+
+Looking deeper at the user from question 15. What is the role of that user in the organization?
+
+
+Modify the query (or just look at the whole row):
+
+```
+Employees
+| where hostname == "3CIU-LAPTOP"
+| project role;
+```
+
+## Question 17
+
+You observe that the file (from question 14) is launching a process on 3CIU-LAPTOP named rundll32.exe with an external IP address. What is that IP address?
+
+```
+ProcessEvents
+| where hostname == "3CIU-LAPTOP"
+| where process_commandline contains "rundll32.exe";
+```
+
+## Question 18
+
+What does this connection (from question 17) indicate? (One of the phases of the cyber kill chain.)
+
+---
+
+C2.
+
+## Question 19
+
+Investigating compromised devices in the org, you find malicious activity using a tool called rclone. What domain is listed in its command line on Julie Well's device?
+
+---
+
+```
+let julies_hostname = toscalar(Employees
+| where name contains "Julie Well"
+| project hostname);
+ProcessEvents
+| where hostname == julies_hostname
+| where process_commandline contains "rclone"
+| project process_commandline;
+```
+
+## Question 20
+
+That's not good. It looks like the attacker copied all files with the extensions listed in the command and extracted it to their domain. What IP address does the domain in question 19 resolve to?
+
+---
+
+```
+PassiveDns
+| where domain == "infiltrate.air"
+| project ip;
+```
+
+## Question 21
+
+How many total domains have also resolved to this IP found in question 20?
+
+---
+
+```
+let domain_ip = toscalar(PassiveDns
+| where domain == "infiltrate.air"
+| project ip);
+PassiveDns
+| where ip == domain_ip
+| count;
+```
+
+## Question 22
+
+According to MITRE ATT&CK, what kind of activity is the command from question 19 used for?
+
+---
+
+Probably exfiltration!
+
+## Question 23
+
+How many devices did the attackers use rclone on?
+
+---
+
+```
+ProcessEvents
+| where process_commandline contains "rclone"
+| distinct hostname;
+```
+
+## Question 24
+
+The attackers disabled Defender (Windows' built-in antivirus) on some devices in the network. How many computers were impacted?
+
+---
+
+This is a difficult question that requires some prior knowledge. Fortunately, I know that "Set-MpPreference -DisableRealtimeMonitoring $true" disables Defender.
+
+```
+ProcessEvents 
+| where process_commandline contains "disablerealtimemonitoring" 
+| distinct hostname 
+| count;
+```
+
+## Question 25
+
+A member of your investigation team reported that host GWB7-DESKTOP was compromised. What is the timestamp of the earliest suspicious process event you observe on this device?
+
+---
+
+I reviewed the results of this query:
+
+```
+ProcessEvents
+| where hostname == "GWB7-DESKTOP";
+```
+
+| Timestamp                   | Process Name | Process Hash                                                     | Command Line                                 | Parent Process Name | Parent Process Hash                                               | Hostname     | User     |
+|-----------------------------|--------------|------------------------------------------------------------------|----------------------------------------------|---------------------|-------------------------------------------------------------------|--------------|----------|
+| 2023-02-07T06:54:56.580296Z | blimp.exe    | ebff4951be5e2481866fc61806b6bf8ebad297f09632a9c067bcdcec6d203521 | cmd.exe net localgroup administrators /domain | cmd.exe            | 5db14986062087b74e88053bad0efa25658185ca316510276579a3b403263f57 | GWB7-DESKTOP | chpoulin |
+
+## Question 26
+
+That's not good. It looks like an attacker has established a connection to this host machine. What is the command and control (C2) IP address observed on GWB7-DESKTOP?
+
+---
+
+Review the results of the prior query.
+
+## Question 27
+
+We should go back and look into other domains this IP used. What is the timestamp of the earliest Passive DNS resolution seen on the IP found in question 26?
+
+---
+
+```
+PassiveDns
+| where ip == "179.175.35.248"
+| take 1
+| project timestamp;
+```
+
+## Question 28
+
+Which of the domains hosted on the IP found in question 26 resolve to the most number of unique IPs? (Answer with the earliest recorded domain.)
+
+---
+
+Compare the results of the previous query with the output from this one:
+
+```
+let domains = (PassiveDns
+| where ip == "179.175.35.248"
+| project domain);
+PassiveDns
+| where domain in (domains)
+| summarize UniqueIpCount = dcount(ip) by domain
+| sort by UniqueIpCount desc;
+```
+
+## Question 29
+
+What is the domain using the .air TLD that resolves to the IP found in question 26?
+
+---
+
+```
+PassiveDns
+| where ip == "179.175.35.248"
+| project domain;
+```
+
+## Question 30
+
+The domain found in question 29 resolves to an IP that starts with "144." What is the hostname on which this IP was used for command and control?
+
+```
+let sus_ip = toscalar(PassiveDns
+| where domain == "deference.air"
+| where ip contains "144"
+| distinct ip);
+ProcessEvents
+| where process_commandline contains sus_ip
+| project hostname;
+```
+
+# Section 4
+
+## Question 1
+
+The company helpdesk has asked for your help in an ongoing investigation on suspicious emails being received. They suggest taking a look at one in particular. How many emails contained the domain database.io?
+
+---
+
+```
+Email
+| where link contains "database.io"
+```
+
+## Question 2
+
+The subject of that email looks a bit suspicious to you. You've seen this type of phrasing in phishing attempts before. It is just the one email though… To be 100% sure, let's investigate that domain a bit more. What IP does the domain database.io resolve to?
+
+---
+
+```
+PassiveDns
+| where domain =~ "database.io"
+| project ip;
+```
+## Question 3
+
+How many domains resolve to the same IP as database.io?
+
+---
+
+```
+PassiveDns
+| where ip == "176.167.219.168"
+| count;
+```
+## Question 4
+
+How many emails contained domains sharing the same IP as database.io?
+
+---
+
+```
+let domains = PassiveDns
+| where ip == "176.167.219.168"
+| project domain = tolower(domain);
+Email
+| where link has_any (domains)
+| count;
+```
+
+## Question 5
+
+What was the most prevalent sender of the emails found in question 4?
+
+---
+
+```
+let domains = PassiveDns
+| where ip == "176.167.219.168"
+| project domain = tolower(domain);
+Email
+| where link has_any (domains)
+| summarize count() by sender;
+```
+## Question 6
+
+How many total emails were sent by the sender found in question 5?
+
+---
+
+```
+Email
+| where sender == "SSL@hotmail.com"
+| count;
+```
+
+## Question 7
+
+This sender seems to use email subjects to convey a sense of urgency to trick unsuspecting users into quickly taking action without taking the correct precautions, a common technique used in phishing. What was the most prevalent email subject used by the sender found in question 5?
+
+---
+
+```
+Email
+| where sender == "SSL@hotmail.com"
+| summarize count()by subject;
+```
+
+## Question 8
+
+All those subjects sound pretty similar to the first email you were looking at. You were right to research that original domain more thoroughly. Now we have a lot more potential victims to look into. You call back the helpdesk to tell them about the suspicious hotmail address you found. Before you can add anything else, they yelp and tell you about a user that flagged a mail they received from them. The user is called Carolyn, she feels really sorry because she clicked on the link and realised afterwards it might have been malicious… Which user named Carolyn clicked on a link containing the domain hardware.com? (Provide full name.)
+
+---
+```
+let names = Employees
+| where name contains "Carolyn"
+| project ip_addr;
+OutboundNetworkEvents
+| where src_ip has_any (names)
+| where url contains "hardware.com";
+```
+
+Then look at the results of this query: 
+
+```
+Employees
+| where name contains "Carolyn"
+```
+## Question 9
+
+What attacker IP was used to login to Carolyn's account after she clicked the link?
+
+---
+
+```
+let names = Employees
+| where name contains "Carolyn"
+| project ip_addr;
+let oops_timestamp = toscalar(OutboundNetworkEvents
+| where src_ip has_any (names)
+| where url contains "hardware.com"
+| project timestamp);
+let user = toscalar(Employees
+| where name == "Carolyn Schaeffer"
+| project username);
+AuthenticationEvents
+| where username == user
+| where timestamp > oops_timestamp;
+```
+
+## Question 10
+
+It looks like this same attacker attempted to log into other accounts as well. How many accounts did the attacker try to log into (successfully or unsuccessfully) from the IP in question 9?
+
+---
+
+```
+AuthenticationEvents
+| where src_ip contains "171.250.201.103";
+```
+
+## Question 11
+
+After logging into Carolyn's email, the attackers also used the IP in question 9 to exfiltrate its content. What filename did they save the data to?
+
+---
+
+```
+InboundNetworkEvents
+| where src_ip contains "171.250.201.103"
+```
+
+## Question 12
+
+When did the attackers exfiltrate data from Carolyn's email?
+
+---
+
+See above query.
+
+## Question 13
+
+We should take note of the IP address used by this domain for further research. What IP does the domain hardware.com resolve to?
+
+---
+
+```
+PassiveDns
+| where domain contains "hardware.com"
+```
+## Question 14
+
+This IP (from question 13) was used to find out information about the company. What is the first URL the attackers browsed to from this IP?
+
+---
+
+```
+InboundNetworkEvents
+| where src_ip == "53.85.224.235";
+```
+
+## Question 15
+
+As you're finishing up the investigation, Carolyn approaches you sheepishly. She's wondering how the attackers found her work email. Since you still have the browsing data from the attackers up on your screen, you're more than happy to show her how they did it. It's not often you get to educate a willing employee on these matters! Which stage of an attack does the behavior seen in question 14 belong to?
+
+---
+
+Possibly recon.
+
+# Section 5
+
+## Question 1
+
+In this type of attack, adversaries compromise software developers, hardware manufacturers, or service providers and use that access to target downstream users of the software, hardware, or service. Solarwinds was impacted by this type of compromise in 2020.
+
+---
+
+Possibly supply chain?
+
+## Question 2
+
+Attackers often use this legitimate Windows feature as a way to establish persistence on a compromised device.
+
+---
+
+Possibly scheduled task.
+
+## Question 3
+
+Attackers often use this legitimate Windows feature as a way to establish persistence on a compromised device. In an `________-___-___-______` phishing attack, an attacker may steal credentials or cookies to bypass multi-factor authentication and gain access to critical systems.
+
+---
+
+Possibly attacker in the middle.
+
+## Question 4
+
+When using this technique, attackers guess many combinations of usernames and passwords in an attempt to access a system.
+
+---
+
+Possibly brute force.
+## Question 5
+
+A `________ ______` attack is when an attacker uses common passwords to try to gain access to multiple accounts in a single environment.
+
+---
+
+Possibly password spray.
+
+## Question 6
+
+This type of malware is designed to permanently erase data from an infected system.
+
+---
+
+Possibly wiper.
+## Question 7
+
+This is a collection of databases for configuration settings for the Windows operating system.
+
+---
+
+Possibly registry.
+
+## Question 8
+
+This describes techniques used by attackers to communicate with systems they control within a victim network.
+
+---
+
+Possibly command and control.
+
+## Question 9
+
+This happens when malware or a malicious actor carries out an unauthorized transfer of data from a system.
+
+---
+
+Possibly exfiltration.
+
+## Question 10
+
+This encoding scheme converts "hello world" to aGVsbG8gd29ybGQ=.
+
+---
+
+Possibly base64.
+
+## Question 11
+
+In this type of attack, attackers gain unauthorized access to information, then release that information to the public, often in an attempt to exert influence.
+
+---
+
+Possibly hack and leak.
+## Question 12
+
+This is a one-way cryptographic algorithm that converts an input of any length to an output of a fixed length.
+
+---
+
+Possibly hash.
+
+## Question 13
+
+This is a cryptographic hashing function that outputs a value that is 256 bits long.
+
+---
+
+Possibly sha256.
+
+## Question 14
+
+This is the process of tracking and identifying the perpetrator of a cyber attack or intrusion.
+
+---
+
+Possibly attribution.
+
+## Question 15
+
+This Twitter user, also known as "Hutch", co-authored the paper that introduced the kill chain to information security. (enter their @ username)
+
+---
+
+Possibly @killchain.
+
+## Question 16
+
+This Twitter user is the Director of Intel at Red Canary and an instructor for SANS FOR578. (enter their @ username)
+
+---
+
+Possibly @likethecoins.
+
+## Question 17
+
+In this type of attack, adversaries encrypt an organization's files and demand a payment in exchange for the decryption key.
+
+---
+
+Possibly ransomware.
+
+## Question 18
+
+In this type of attack, adversaries gain access to an organization's intellectual property or other sensitive data and threatens to release the data publicly unless the organization pays the adversary.
+
+---
+
+Possibly extortion.
+
+## Question 19
+
+This type of vulnerability is unknown to the people responsible for patching or fixing it.
+
+---
+
+Possibly zero day.
+
+## Question 20
+
+In this phase of the kill chain, attackers try to gather as much information as possible about their victims.
+
+---
+
+Possibly recon.
+
+## Question 21
+
+Attackers use this technique to probe victim infrastructure for vulnerabilities via network traffic.
+
+---
+
+Possibly active scanning.
+
+## Question 22
+
+This data source can be used to get additional information about registered users or assignees of an Internet resource, such as a domain name, an IP address block or an autonomous system.
+
+---
+
+Possibly whois.
+
+## Question 23
+
+In this type of attack, adversaries compromise a legitimate website and add malicious code in an attempt to target users who visit that site.
+
+---
+
+Possibly drive by.
