@@ -1,4 +1,4 @@
-[https://kc7cyber.com/challenges/38
+https://kc7cyber.com/challenges/38
 
 # Section 2
 ## Question 1
