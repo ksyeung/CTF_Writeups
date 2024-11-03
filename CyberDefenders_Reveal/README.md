@@ -1,4 +1,6 @@
-This is a brief description of my work on the CyberDefenders "Reveal" lab (category: Endpoint Forensics).  
+https://cyberdefenders.org/blueteam-ctf-challenges/revil/
+
+This is a brief description of my work on the CyberDefenders "Reveal" lab (category: Endpoint Forensics). It has a difficulty of Easy.
 
 
 Here is the scenario:
