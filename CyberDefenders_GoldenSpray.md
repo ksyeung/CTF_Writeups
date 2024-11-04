@@ -1,5 +1,7 @@
 https://cyberdefenders.org/blueteam-ctf-challenges/goldenspray/
 
+This is a Medium difficulty threat hunting lab, with an option to select the Splunk or Elastic SIEM. I elected to use Elastic.
+
 Scenario:
 >As a cybersecurity analyst at SecureTech Industries, you've been alerted to unusual login attempts and unauthorized access within the company's network. Initial indicators suggest a potential brute-force attack on user accounts. Your mission is to analyze the provided log data to trace the attack's progression, determine the scope of the breach, and attacker's TTPs.
 
