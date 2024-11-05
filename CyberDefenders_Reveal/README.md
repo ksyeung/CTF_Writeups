@@ -1,4 +1,4 @@
-https://cyberdefenders.org/blueteam-ctf-challenges/revil/
+[https://cyberdefenders.org/blueteam-ctf-challenges/revil/](https://cyberdefenders.org/blueteam-ctf-challenges/reveal/)
 
 This is a brief description of my work on the CyberDefenders "Reveal" lab (category: Endpoint Forensics). It has a difficulty of Easy.
 
