@@ -1,5 +1,7 @@
 https://aceresponder.com/challenge/volt-typhoon
 
+This is an excellent challenge from the Ace Responder platform modeled on actions by a real threat actor. We use the Elastic SIEM to investigate.
+
 Scenario: 
 >Welcome to the Volt Typhoon challenge! In this challenge, you will encounter a simulated incident that draws inspiration from the Volt Typhoon's infamous tactics. As a member of the incident response team, your mission is to meticulously investigate the breach, piece together the puzzle of the attack, and assess the extent of the damage caused.
 >
