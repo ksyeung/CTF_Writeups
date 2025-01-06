@@ -41,9 +41,7 @@ Knowing that modern systems commonly store password hashes at '/etc/shadow', I c
 
 **Q5. Persistence: What file did the attacker modify for persistence?**
 
- I have limited familiarity with Linux persistence methods and reviewed Pepe Berba's excellent article about it to learn more: https://pberba.github.io/security/2021/11/22/linux-threat-hunting-for-persistence-sysmon-auditd-webshell
-
-Here's a chart from the article: ![[Pasted image 20241204193843.png]]
+ I have limited familiarity with Linux persistence methods and reviewed Pepe Berba's excellent article about it to learn more: https://pberba.github.io/security/2021/11/22/linux-threat-hunting-for-persistence-sysmon-auditd-webshell The chart is especially handy.
 
 Anyway, I reused the same query earlier with a minor addition, and added the columns `auditd.summary.object.primary` and `process.title`:
 
@@ -57,8 +55,7 @@ This row in particular jumped out at me:
 | --------------------------- | ----------------------------- | -------------------------------- |
 | Dec 12, 2023 @ 12:28:45.059 | /usr/bin/chmod                | chmod +x /etc/cron.daily/install |
 
-Unfortunately, its not clear to me how the binary ended up in this directory or what is actually contained in it, but it does appear to be the answer to the question. After submitting the answer, the explanation didn't help resolve my confusion, but did explain a better way to approach this problem -- using the parent PID for the script to pivot: `
-`process.ppid:25448 OR process.ppid:25393`
+Unfortunately, its not clear to me how the binary ended up in this directory or what is actually contained in it, but it does appear to be the answer to the question. After submitting the answer, the explanation didn't help resolve my confusion, but did explain a better way to approach this problem -- using the parent PID for the script to pivot: `process.ppid:25448 OR process.ppid:25393`
 
 **Q6. File System Event: Did the attacker create /etc/cron.daily/install or just modify it?**
 
