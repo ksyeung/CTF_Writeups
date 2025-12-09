@@ -1,0 +1,59 @@
+,,,,,,,
+,System Name,Date/Time (UTC),Activity,Evidence Source,Details/Comments,Owner/Account,Hash
+,meowivantivpn,"Jun 30, 2025 @ 06:57:43.000",File contents replaced with symlink to /tmp/wsh.cgi,ivanti_timeline.csv,/mnt/ivanti/home/root/home/webserver/htdocs/dana-na/jam/getComponent.cgi,,
+,meowivantivpn,"Jun 30, 2025 @ 06:57:43.000",File contents replaced with symlink to /tmp/wsh.cgi,ivanti_timeline.csv,/mnt/ivanti/home/root/home/webserver/htdocs/dana-na/auth/restAuth.cgi,,
+,meowivantivpn,"Jun 30, 2025 @ 06:57:43.000",File contents replaced with symlink to /tmp/wsh.cgi,ivanti_timeline.csv,/mnt/ivanti/home/root/home/webserver/htdocs/dana-na/auth/compcheckresult.cgi,,
+,meowivantivpn,"Jun 30, 2025 @ 08:05:00.000",File created: ""/mnt/ivanti/home/root/home/webserver/htdocs/dana-na/auth/lastauthserverused.js"",ivanti_timeline.csv,WARPWIRE credential harvester variant,,
+,meowivantivpn,"Jul 26, 2025 @ 07:15:52.000",raw_message:""Integrity Scan Completed: Detected 2 mismatched files"",SYS32040,,,1E15B43982A9D2336A7DCBFA438D3982DA981764
+,meowivantivpn,"Jul 29, 2025 @ 10:10:14.000",File modified: ""/mnt/ivanti/home/root/home/perl/DSAuth.pm"",ivanti_timeline.csv,Credential harvesting Perl code deployed,,
+,meowivantivpn,"Jul 29, 2025 @ 10:10:39",File modified: ""/mnt/ivanti/home/root/home/webserver/htdocs/dana-na/css/meow-log.css"",ivanti_timeline.csv,symlink to /tmp/mIsession.log,,
+,meowivantivpn,"Jul 29, 2025 @ 10:11:30",File modified: ""/mnt/ivanti/home/root/home/webserver/htdocs/dana-na/css/accessibility.css"",ivanti_timeline.csv,"contents of /runtime/mtmp/lmdb, the Ivanti appliance database cache",,
+,meowivantivpn,"Jul 29, 2025 @ 10:11:46",File modified: ""/mnt/ivanti/home/root/home/webserver/htdocs/dana-na/css/colorblind.css"",ivanti_timeline.csv,contents of /runtime/mtmp/lmdb,,
+,meowivantivpn,"Jul 29, 2025 @ 10:26:41.000",Unauthenticated request url /dana-na/css/meow-log.css came from IP 188.210.211.178.,AUT31556,First access of symbolic link to file containing harvested credentials,,
+,meowivantivpn,"Jul 29, 2025 @ 10:26:54.000",Unauthenticated request url /dana-na/auth/url_default/welcome.cgi came from IP 34.205.82.129.,AUT31556,First URI accessed by a suspicious IP,,
+,meowivantivpn,"Jul 29, 2025 @ 10:26:56.000",Unauthenticated request url /dana-na/css/meow-log.css came from IP 34.205.82.129.,AUT31556,Second access of symbolic link to file containing WARPWIRE harvested credentials. Subsequently occurs 69 more times at unpredictable intervals,,
+,meowivantivpn,"Jul 29, 2025 @ 10:51:25.000",Unauthenticated request url /dana-na/css/colorblind.css came from IP 34.205.82.129.,AUT31556,Remote access of Ivanti database cache,,
+,meowivantivpn,"Jul 29, 2025 @ 10:51:48.000",Unauthenticated request url /dana-na/css/accessibility.css came from IP 34.205.82.129.,AUT31556,Remote access of Ivanti database cache,,
+,meowivantivpn,"Jul 29, 2025 @ 12:00:10.000",raw_message: ""Integrity Scan Completed: Detected 3 mismatched files"",SYS32040,,,
+,meowivantivpn,"Jul 29, 2025 @ 12:00:10.000",raw_message: ""Integrity Scan Completed: Detected 3 new files"",SYS32039,"/mnt/ivanti/home/root/home/webserver/htdocs/dana-na/css/meow-log.css, accessibility.css and colorblind.css",,
+,meowivantivpn,"Jul 29, 2025 @ 12:29:22.000",Login failed for 'Primary' authentication using auth server 'Meow Islands AD' ('Active Directory'). Reason: 'Short Password',AUT31985,First event from unusual UA ""Mozilla/5.0 (=ↀωↀ=) MeowBrowser/1.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"",,
+,meowivantivpn,"Jul 30, 2025 @ 08:48:20.000",Primary authentication successful for DOTF\jbennett/Meow Islands AD from 34.205.82.129,AUT24326,First successful login from this IP,,
+,meowivantivpn,"Jul 30, 2025 @ 08:51:22.000","Bookmark access started for application_type [Web] bookmark-type: [Admin defined], bookmark-name: [Ivanti VPN Admin page], resource: [https://172.20.1.4/admin].",FBR32068,Bookmark access for Ivanti VPN Admin page,,
+,meowivantivpn,"Jul 30, 2025 @ 08:55:44.000",Session started for User [DOTF\jbennett] with app_session_id [html5Adv_session_57718ba] connection_broker [NA] Desktop/Protocol [rdp] Host [10.20.2.6:3389] host-ip [10.20.2.6] connection_type [Advanced HTML5] bookmark_name [RDP to SRV01 via Browser],WEB32064,RDP access of meow-SRV01,,
+,meowivantivpn,"Jul 30, 2025 @ 09:58:39.000",Theft of Ivanti database cache /runtime/mtmp/lmdb,ivanti_timeline.csv,/mnt/ivanti/home/root/home/webserver/htdocs/dana-na/css/themes-dark.css,,
+,meowivantivpn,"Jul 30, 2025 @ 19:57:42.000",[pid: 22010|app: 0|req: 1/1] 172.20.1.4 () {34 vars in 581 bytes} [Wed Jul 30 19:57:42 2025] POST /api/v1/totp/user-backup-code/../../system/maintenance/archiving/cloud-server-test-connection => generated 54 bytes in 977 msecs (HTTP/1.1 200) 2 headers in 71 bytes (1 switches on core 0),/mnt/ivanti/runtime/var/dlogs/config_rest_server.log.old,POST request exploiting CVE-2023-46805 and CVE-2024-21887,,
+,meowivantivpn,"Jul 31, 2025 @ 04:22:50.000",File created: ""/mnt/ivanti/runtime/var/dlogs/config_rest_server.log.old"",ivanti_timeline.csv,,,6B242AD80260F3CB3E67A1D2A1EE164DE465C76E
+,meow-SRV01,"Jul 31, 2025 @ 20:15:49.627",""C:\Windows\system32\quser.exe"" /server:10.20.2.1,Event ID 1,Network enum,dotf\jbennett,
+,meow-SRV01,"Jul 31, 2025 @ 20:16:20.742",C:\Users\jbennett\Downloads\ADExplorer.exe:Zone.Identifier,Event ID 11,SysInternals ADExplorer,dotf\jbennett,
+,meow-SRV01,"Jul 31, 2025 @ 20:16:22.458",C:\Users\jbennett\Downloads\ADExplorer.exe,Event ID 1,AD enum,dotf\jbennett,
+,meow-SRV01,"Jul 31, 2025 @ 20:16:24.899",C:\Users\jbennett\AppData\Local\Temp\3\ADExplorer.exe,Event ID 1,AD enum,dotf\jbennett,
+,meow-SRV01,"Jul 31, 2025 @ 20:18:00.000",""C:\Windows\system32\quser.exe"" /server:10.20.2.5,Event ID 1,Network enum,dotf\jbennett,
+,meow-SRV01,"Jul 31, 2025 @ 20:18:13.824",""C:\Windows\system32\quser.exe"" /server:10.20.2.12,Event ID 1,Network enum,dotf\jbennett,
+,meow-SRV01,"Jul 31, 2025 @ 20:18:17.388",""C:\Windows\system32\quser.exe"" /server:10.20.2.13,Event ID 1,Network enum,dotf\jbennett,
+,meow-SRV01,"Jul 31, 2025 @ 20:18.25.153",C:\Users\jbennett\AppData\Local\Temp\3\ADExplorer.exe"" Destination IP/Port 10.20.2.5:389,Event ID 3,,dotf\svc-admin,
+,meow-WKS03,"Jul 31, 2025 @ 20:23:39.019",C:\Program Files\WindowsApps\Microsoft.WindowsNotepad_11.2504.62.0_x64__8wekyb3d8bbwe\Notepad\Notepad.exe"" ""C:\Users\svc-admin\Desktop\Custom-Logging.ps1"",Event ID 1,"Created Custom-Logging.ps1, which may have modified the audit policy (there is an identical filename on the DC from early July)",dotf\svc-admin,
+,meow-SRV01,"Jul 31, 2025 @ 23:43:31.745",robocopy ""\\meow-wks02\c$\Users\labadmin\Desktop"" ""C:\ProgramData\Log\meow-wks02"" *.txt *.doc *.xls *.ppt *.docx *.xlsx *.pptx *.pdf *.vsd *.vsdx *.edx *.config *.cfg *.rtf *.lnk *.csv *.pptm /S /MAXAGE:7 /XF *.tmp *.bak /LOG+:C:\ProgramData\Log\meow-wks02.log,Event ID 1,,dotf\jbennett,
+,meow-SRV01,"Jul 31, 2025 @ 23:43:31.102",robocopy """"\\meow-wks01\c$\Users\chernandez""\%%F"" ""C:\ProgramData\Log\meow-wks01"" *.txt *.doc *.xls *.ppt *.docx *.xlsx *.pptx *.pdf *.vsd *.vsdx *.edx *.config *.cfg *.rtf *.lnk *.csv *.pptm /S /MAXAGE:7 /XF *.tmp *.bak /LOG+:C:\ProgramData\Log\meow-wks01.log,Event ID 1,,dotf\jbennett,
+,meow-SRV01,"Aug 1, 2025 @ 01:53:13.838","mxb.yxz.red, 34.205.82.129, likely associated with the download of back.bat",Event ID 22,,dotf\jbennett,
+,meow-SRV01,"Aug 1, 2025 @ 01:53:28.615",C:\Users\jbennett\Downloads\back.bat:Zone.Identifier,Event ID 11,,dotf\jbennett,
+,meow-SRV01,"Aug 1, 2025 @ 01:56:51.816",cscript //nologo ""C:\Users\jbennett\AppData\Local\Temp\enable_backup_priv.vbs"",Event ID 1,,dotf\jbennett,
+,meow-SRV01,"Aug 1, 2025 @ 08:44:09.861",mstsc.exe,Event ID 4688,,dotf\jbennett,
+,meow-SRV01,"Aug 1, 2025 @ 08:44:10.317",Connecting to 10.20.3.1 (meow-WKS03) over RDP,Event ID 13,,dotf\jbennett,
+,meowivantivpn,"Aug 1, 2025 @ 21:04:53.000",File modified: ""/mnt/ivanti/swap/mIsession.log"",ivanti_timeline.csv,Contains WARPWIRE harvested credentials,,
+,meow-SRV01,"Aug 1, 2025 @ 21:05:51.710",C:\Users\svc-admin\Downloads\backup.bat:Zone.Identifier,Event ID 11,,dotf/svc-admin,938151C8EF33735C2F0482EC8C8AE4CE9AC7F367
+,meow-SRV01,"Aug 1, 2025 @ 21:05:55.507",C:\Users\svc-admin\Downloads\shed.bat:Zone.Identifier,Event ID 11,,dotf/svc-admin,70AC4F6D13152EECB09980D0276FD446D1659C7F
+,meow-SRV01,"Aug 1, 2025 @ 21:07:00.088",schtasks /create /tn ""Robocopy_Backup_AM"" /tr ""cmd /c \""C:\ProgramData\Logs\shed.bat\"""" /sc daily /st 03:00 /ru SYSTEM /rl highest /f,Event ID 1,Runs every day at 03:00,dotf/svc-admin,
+,meow-SRV01,"Aug 1, 2025 @ 21:07:01.216",User ""S-1-5-18"" registered Task Scheduler task ""\Robocopy_Backup_AM"",Event ID 106,,,
+,meow-SRV01,"Aug 1, 2025 @ 21:07:01.222",schtasks /create /tn ""Robocopy_Backup_PM"" /tr ""cmd /c \""C:\ProgramData\Logs\shed.bat\"""" /sc daily /st 21:00 /ru SYSTEM /rl highest /f,Event ID 1,Runs every day at 21:00,dotf/svc-admin,
+,meow-SRV01,"Aug 1, 2025 @ 21:07:01.319",User ""S-1-5-18"" registered Task Scheduler task ""\Robocopy_Backup_PM"",Event ID 106,,,
+,meow-SRV01,"Aug 1, 2025 @ 21:37:55.223",File stream created: ""C:\Users\svc-admin\Downloads\BackupClient.zip:Zone.Identifier"",Event ID 15,Contents: [ZoneTransfer]  ZoneId=3  ReferrerUrl=http://mxb.yxz.red/,dotf/svc-admin,c02e81a5da8ac38e30bd7bbdca6012f95bf2a5bb
+,meow-SRV01,"Aug 1, 2025 @ 21:38:08.382",File stream created: ""C:\ProgramData\Logs\BackupClient.zip:Zone.Identifier"",Event ID 15,"Contents: [ZoneTransfer]  ZoneId=3  ReferrerUrl=http://mxb.yxz.red/  HostUrl=http://mxb.yxz.red/BackupClient.zip  Contains wsc_proxy.exe, wsc.dll, bak.exe",dotf/svc-admin,8b56dfb5de9d921dfbc5dde1a10b7087b99864ed
+,meow-SRV01,"Aug 1, 2025 @ 21:39:17.804",File created C:\ProgramData\Logs\BackupClient\Mcaffee\wsc_proxy.exe,Event ID 11,"This has a VT insight that reads in part: ""The code loads the legitimate `wsc.dll`, retrieves a function address from it, and then passes its own command line arguments to that function.""",dotf/svc-admin,80305BED318B3124F3C3F5C5A1E577BD0A1AC498
+,meow-SRV01,"Aug 1, 2025 @ 21:39:17.908",File created C:\ProgramData\Logs\BackupClient\Mcaffee\bak.exe,Event ID 11,Created by wsc_proxy.exe,dotf/svc-admin,99C3B4CB6DEFD1663565B200D2D8F5106ECF68B8
+,meow-SRV01,"Aug 1, 2025 @ 21:39:25.939",process.executable: ""C:\ProgramData\Logs\BackupClient\Mcaffee\wsc_proxy.exe"",Event ID 1,Product: ""Avast Antivirus"",dotf/svc-admin,
+,meow-SRV01,"Aug 1, 2025 @ 21:39:25.969",file.path: ""C:\ProgramData\Logs\BackupClient\Mcaffee\wsc.dll"",Event ID 7,wcs.dll sideloaded into wsc_proxy.exe,dotf/svc-admin,EA62CE315C2AAA19D7C13D9D9E9584756ABDC503
+,meow-SRV01,"Aug 1, 2025 @ 21:47:12.872",File created C:\ProgramData\Logs\backupClient.ps1,Event ID 11,,dotf/jbennett,938151C8EF33735C2F0482EC8C8AE4CE9AC7F367
+,meow-SRV01,"Aug 1, 2025 @ 21:47:42.805","Network connection detected. process.name: ""powershell.exe"", destination.ip: ""162.125.1.14"", destination.port: ""443""",Event ID 3,Data exfil C:\ProgramData\Logs\backupClient.ps1,dotf/jbennett,
+,meow-SRV01,"Aug 1, 2025 @ 21:47:45.383",backupClient.ps1 executed,Event ID 4104,Exfil script,dotf/jbennett,
+,meow-SRV01,"Aug 2, 2025 @ 11:00:00.718",Task Scheduler successfully finished ""{f9de02ba-31d6-484a-8216-4f5f8e775b4b}"" instance of the ""\Robocopy_Backup_PM"" task for user ""NT AUTHORITY\SYSTEM"".,Event ID 102,,,
+,meow-SRV01,"Aug 2, 2025 @ 17:00:00.653",Task Scheduler successfully finished ""{e5427a7e-22a6-48d2-8a1f-069028e03e26}"" instance of the ""\Robocopy_Backup_AM"" task for user ""NT AUTHORITY\SYSTEM"".,Event ID 102,,,
